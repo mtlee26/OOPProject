@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<!--<?import javafx.scene.control.*?>-->
+<!--<?import javafx.scene.layout.*?>-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.SearchController">
-   <children>
-       <TabPane layoutX="6.0" layoutY="6.0" prefHeight="386.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">
-           <tabs>
-               <Tab text="  Dictionary  ">
-                   <content>
-                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                               <Pane layoutX="100.0" layoutY="14.0" prefHeight="65.0" prefWidth="388.0">
-                                   <children>
-                                       <TextField fx:id="searchField" layoutX="120.0" layoutY="12.0" promptText="Enter Any Word" />
-                                       <Button fx:id="searchButton" layoutX="320.0" layoutY="7.0" mnemonicParsing="false" onAction="#onSearchButton" prefHeight="34.0" prefWidth="38.0" text="ok" />
-                                   </children></Pane>
-                               <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0">
-                                   <children>
-                                       <ListView fx:id="suggestList" layoutX="16.0" layoutY="15.0" onMouseClicked="#onMouseClickedSuggestList" prefHeight="185.0" prefWidth="177.0" />
-                                   </children>
-                               </Pane>
-                               <Pane layoutX="306.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
-                                   <children>
-                                       <TextArea fx:id="meaningBox" layoutX="12.0" layoutY="6.0" prefHeight="190.0" prefWidth="177.0" promptText="Meaning" />
-                                   </children>
-                               </Pane>
-                           </children></AnchorPane>
-                   </content>
-               </Tab>
-               <Tab text="Google Translate">
-                   <content>
-                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                   </content>
-               </Tab>
-           </tabs>
-       </TabPane>
-   </children>
-</AnchorPane>
+<!--<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.SearchController">-->
+<!--   <children>-->
+<!--       <TabPane layoutX="6.0" layoutY="6.0" prefHeight="386.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">-->
+<!--           <tabs>-->
+<!--               <Tab text="  Dictionary  ">-->
+<!--                   <content>-->
+<!--                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">-->
+<!--                           <children>-->
+<!--                               <Pane layoutX="100.0" layoutY="14.0" prefHeight="65.0" prefWidth="388.0">-->
+<!--                                   <children>-->
+<!--                                       <TextField fx:id="searchField" layoutX="120.0" layoutY="12.0" promptText="Enter Any Word" />-->
+<!--                                       <Button fx:id="searchButton" layoutX="320.0" layoutY="7.0" mnemonicParsing="false" onAction="#onSearchButton" prefHeight="34.0" prefWidth="38.0" text="ok" />-->
+<!--                                   </children></Pane>-->
+<!--                               <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0">-->
+<!--                                   <children>-->
+<!--                                       <ListView fx:id="suggestList" layoutX="16.0" layoutY="15.0" onMouseClicked="#onMouseClickedSuggestList" prefHeight="185.0" prefWidth="177.0" />-->
+<!--                                   </children>-->
+<!--                               </Pane>-->
+<!--                               <Pane layoutX="306.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">-->
+<!--                                   <children>-->
+<!--                                       <TextArea fx:id="meaningBox" layoutX="12.0" layoutY="6.0" prefHeight="190.0" prefWidth="177.0" promptText="Meaning" />-->
+<!--                                   </children>-->
+<!--                               </Pane>-->
+<!--                           </children></AnchorPane>-->
+<!--                   </content>-->
+<!--               </Tab>-->
+<!--               <Tab text="Google Translate">-->
+<!--                   <content>-->
+<!--                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />-->
+<!--                   </content>-->
+<!--               </Tab>-->
+<!--           </tabs>-->
+<!--       </TabPane>-->
+<!--   </children>-->
+<!--</AnchorPane>-->

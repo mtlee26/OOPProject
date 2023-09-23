@@ -16,7 +16,7 @@ public class DictionaryApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent rootDictionary = FXMLLoader.load(getClass().getResource("DictionaryView.fxml"));
+        Parent rootDictionary = FXMLLoader.load(getClass().getResource("/Views/DictionaryView.fxml"));
         Scene dictionaryScene = new Scene(rootDictionary);
         primaryStage.setTitle("Dictionary Application");
         primaryStage.setScene(dictionaryScene);
