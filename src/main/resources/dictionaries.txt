@@ -1,3 +1,69 @@
+AIDS: AIDS
+AM: LÀ
+African: Châu Phi
+African-American: Người Mỹ gốc Phi
+American: Người Mỹ
+Arab: Arab
+Asian: Châu Á
+Bible: Kinh Thánh
+British: người Anh
+CEO: CEO
+Canadian: người Canada
+Catholic: Công giáo
+Chinese: Trung Quốc
+Christian: Christian
+Christianity: Cơ đốc giáo
+Christmas: Giáng Sinh
+Congress: Hội nghị
+Cuban: Cuba
+DNA: DNA
+Democrat: Dân chủ
+Dutch: Người Hà Lan
+English: Anh
+European: Châu Âu
+FALSE: SAI
+French: người Pháp
+German: tiếng Đức
+God: thần
+Greek: người Hy Lạp
+Hispanic: Người Hispanic
+I: tôi
+Indian: người Ấn Độ
+Internet: Internet
+Iraqi: Iraqi
+Irish: Người Ailen
+Islam: đạo Hồi
+Islamic: Hồi giáo
+Israeli: Israeli
+Italian: người Ý
+Japanese: tiếng Nhật
+Jew: Người Do Thái
+Jewish: Người Do thái
+Korean: Hàn Quốc
+Latin: Latin
+Mexican: Mexico
+Mr: Ông
+Mrs: Bà
+Ms: Cô
+Muslim: Hồi giáo
+Olympic: Olympic
+Olympics: Thế vận hội
+PC: PC
+PM: PM
+Palestinian: Palestine
+Persian: Người Ba Tư
+Republican: Đảng Cộng hòa
+Roman: Roman
+Russian: Người Nga
+Senate: Thượng nghị viện
+Soviet: Liên Xô
+Spanish: người Tây Ban Nha
+Supreme: Tối cao
+T-shirt: Áo thun
+TRUE: THẬT
+TV: TV
+Thanksgiving: Lễ Tạ ơn
+United: United
 a: một
 abandon: từ bỏ
 ability: có khả năng
@@ -34,6 +100,8 @@ accurate: chính xác
 accurately: chính xác
 accusation: tố cáo
 accuse: tố cáo
+achieve: Hoàn thành
+achievement: thành tích
 acid: axit
 acknowledge: công nhận
 acquire: có được, thu được
@@ -46,11 +114,9 @@ actively: tích cực
 activist: nhà hoạt động
 activity: Hoạt động
 actor: diễn viên
+actress: nữ diễn viên
 actual: thực tế
 actually: thực ra
-actress: nữ diễn viên
-achieve: Hoàn thành
-achievement: thành tích
 ad: quảng cáo
 adapt: phỏng theo
 add: thêm vào
@@ -86,8 +152,6 @@ affair: chuyện
 affect: có ảnh hưởng đến
 afford: đủ khả năng
 afraid: sợ
-African: Châu Phi
-African-American: Người Mỹ gốc Phi
 after: sau
 afternoon: buổi chiều
 afterward: sau đó
@@ -108,7 +172,6 @@ ah: ah
 ahead: phía trước
 aid: viện trợ
 aide: trợ lý
-AIDS: AIDS
 aim: mục đích
 air: không khí
 aircraft: phi cơ
@@ -138,17 +201,15 @@ already: đã
 also: cũng thế
 alter: thay đổi
 alternative: thay thế
-altogether: hoàn toàn
 although: mặc dù
+altogether: hoàn toàn
 aluminum: nhôm
 always: luôn luôn
-AM: LÀ
 amazing: kinh ngạc
 ambassador: đại sứ
 ambition: tham vọng
 ambitious: đầy tham vọng
 amendment: sửa đổi
-American: Người Mỹ
 amid: giữa
 among: trong số
 amount: số lượng
@@ -160,6 +221,10 @@ ancestor: tổ tiên
 ancient: xưa
 and: và
 and/or: và / hoặc
+angel: Thiên thần
+anger: Sự phẫn nộ
+angle: góc
+angry: bực bội
 animal: thú vật
 ankle: mắt cá
 anniversary: ngày kỷ niệm
@@ -180,14 +245,10 @@ anyone: bất kỳ ai
 anything: bất cứ điều gì
 anyway: dù sao
 anywhere: ở đâu
-angel: Thiên thần
-anger: Sự phẫn nộ
-angle: góc
-angry: bực bội
 apart: xa nhau
 apartment: căn hộ, chung cư
-apology: xin lỗi
 apologize: xin lỗi
+apology: xin lỗi
 apparent: rõ ràng
 apparently: dường như
 appeal: kháng cáo
@@ -205,7 +266,6 @@ appropriate: thích hợp
 approval: sự chấp thuận
 approve: tán thành
 approximately: xấp xỉ
-Arab: Arab
 architect: kiến trúc sư
 architecture: kiến trúc
 are: là
@@ -234,7 +294,6 @@ artist: họa sĩ
 artistic: nghệ thuật
 as: như
 ash: tro
-Asian: Châu Á
 aside: qua một bên
 ask: hỏi
 asleep: ngủ
@@ -260,11 +319,13 @@ assumption: giả thiết
 assure: cam đoan
 astronomer: nhà thiên văn học
 at: tại
+athlete: lực sĩ
+athletic: Khỏe mạnh
 atmosphere: không khí
 atom: nguyên tử
 atop: trên
-attack: tấn công
 attach: đính kèm
+attack: tấn công
 attempt: cố gắng
 attend: tham gia
 attendance: sự tham dự
@@ -275,19 +336,17 @@ attract: thu hút
 attraction: sức hút
 attractive: hấp dẫn
 attribute: thuộc tính
-athlete: lực sĩ
-athletic: Khỏe mạnh
 auction: bán đấu giá
 audience: thính giả
 aunt: cô dì
+author: tác giả
+authority: thẩm quyền
+authorize: cho phép
 auto: Tự động
 automatic: tự động
 automatically: tự động
 automobile: ôtô
 autonomy: tự trị
-author: tác giả
-authority: thẩm quyền
-authorize: cho phép
 availability: khả dụng
 available: có sẵn
 average: Trung bình cộng
@@ -335,10 +394,10 @@ basis: nền tảng
 basket: cái rổ
 basketball: bóng rổ
 bat: gậy
-battery: ắc quy
-battle: chiến đấu
 bath: bồn tắm
 bathroom: phòng tắm
+battery: ắc quy
+battle: chiến đấu
 bay: bay
 be: được
 beach: bờ biển
@@ -388,7 +447,6 @@ better: tốt hơn
 between: giữa
 beyond: vượt ra ngoài
 bias: sự thiên vị
-Bible: Kinh Thánh
 bicycle: Xe đạp
 bid: BID
 big: lớn
@@ -397,8 +455,8 @@ bill: hóa đơn
 billion: tỷ
 bind: trói buộc
 biography: tiểu sử
-biology: sinh học
 biological: sinh học
+biology: sinh học
 bird: chim
 birth: Sinh
 birthday: sinh nhật
@@ -445,10 +503,10 @@ boring: nhàm chán
 born: sinh ra
 borrow: vay
 boss: trùm
-bottle: chai
-bottom: đáy
 both: cả hai
 bother: làm phiền
+bottle: chai
+bottom: đáy
 bought: đã mua
 bounce: tung lên
 boundary: ranh giới
@@ -478,7 +536,6 @@ briefly: ngắn gọn
 bright: sáng
 brilliant: rực rỡ
 bring: mang đến
-British: người Anh
 broad: rộng lớn
 broadcast: phát sóng
 broke: đã phá vỡ
@@ -541,7 +598,6 @@ camp: trại
 campaign: chiến dịch
 campus: khuôn viên
 can: có thể
-Canadian: người Canada
 cancel: hủy bỏ
 cancer: ung thư
 candidate: ứng viên
@@ -582,7 +638,6 @@ catalog: mục lục
 catch: bắt lấy
 category: thể loại
 cattle: gia súc
-Catholic: Công giáo
 caught: bắt
 cause: nguyên nhân
 cave: hang
@@ -595,12 +650,62 @@ cell: tế bào
 cemetery: Nghĩa trang
 cent: cent
 center: Trung tâm
-century: thế kỷ
 central: Trung tâm
-CEO: CEO
+century: thế kỷ
 ceremony: Lễ
 certain: chắc chắn
 certainly: chắc chắn
+chain: chuỗi
+chair: cái ghế
+chairman: Chủ tịch
+challenge: thử thách
+chamber: buồng
+champion: quán quân
+championship: chức vô địch
+chance: cơ hội
+change: thay đổi
+changing: thay đổi
+channel: kênh
+chaos: hỗn loạn
+chapter: chương
+character: tính cách
+characteristic: đặc trưng
+characterize: đặc trưng
+charge: sạc điện
+charity: từ thiện
+charm: quyến rũ
+chart: đồ thị
+charter: điều lệ
+chase: đuổi theo
+cheap: giá rẻ
+cheat: lừa đảo
+check: kiểm tra
+cheek: má
+cheer: vui lên
+cheese: phô mai
+chef: đầu bếp
+chemical: hóa chất
+chemistry: hóa học
+chest: ngực
+chew: nhai
+chick: chick
+chicken: gà
+chief: giám đốc
+child: đứa trẻ
+childhood: thời thơ ấu
+children: bọn trẻ
+chill: làm lạnh
+chin: cái cằm
+chip: Chip
+chocolate: sô cô la
+choice: lựa chọn
+cholesterol: cholesterol
+choose: chọn
+chop: chặt
+chord: dây nhau
+chronic: mãn tính
+chunk: mảnh
+church: nhà thờ
 cigarette: thuốc lá
 circle: vòng tròn
 circuit: mạch
@@ -629,9 +734,9 @@ client: khách hàng
 cliff: vách đá
 climate: khí hậu
 climb: leo
+cling: bám lấy
 clinic: phòng khám bệnh
 clinical: lâm sàng
-cling: bám lấy
 clip: kẹp
 clock: đồng hồ
 close: gần
@@ -755,6 +860,7 @@ confront: đối đầu
 confrontation: đối đầu
 confuse: nhầm lẫn
 confusion: sự nhầm lẫn
+congressional: quốc hội
 connect: kết nối
 connection: kết nối
 conscience: lương tâm
@@ -823,8 +929,6 @@ convict: tù nhân
 conviction: lòng tin chắc, sự kết án, phán quyết
 convince: thuyết phục
 convinced: thuyết phục
-Congress: Hội nghị
-congressional: quốc hội
 cook: nấu ăn
 cookie: bánh quy
 cooking: nấu nướng
@@ -832,7 +936,7 @@ cool: mát mẻ
 cooperate: hợp tác
 cooperation: hợp tác
 cooperative: hợp tác xã
-coordinate: danh từ: Tọa độ
+coordinate: danh từ
 coordinator: điều phối viên
 cop: cảnh sát
 cope: đối phó
@@ -863,8 +967,8 @@ counselor: cố vấn
 count: đếm
 counter: quầy tính tiền
 counterpart: đối tác
-county: quận
 country: Quốc gia
+county: quận
 coup: cuộc đảo chính
 couple: vợ chồng
 courage: lòng can đảm
@@ -907,7 +1011,6 @@ cruise: du lịch
 crush: nghiền nát
 cry: khóc
 crystal: pha lê
-Cuban: Cuba
 cue: gợi ý
 cultural: văn hoá
 culture: nền văn hóa
@@ -927,61 +1030,6 @@ customer: khách hàng
 cut: cắt tỉa
 cute: dễ thương
 cycle: chu kỳ
-chain: chuỗi
-chair: cái ghế
-chairman: Chủ tịch
-challenge: thử thách
-chamber: buồng
-champion: quán quân
-championship: chức vô địch
-chance: cơ hội
-channel: kênh
-change: thay đổi
-changing: thay đổi
-chaos: hỗn loạn
-chapter: chương
-character: tính cách
-characteristic: đặc trưng
-characterize: đặc trưng
-charge: sạc điện
-charity: từ thiện
-charm: quyến rũ
-chart: đồ thị
-charter: điều lệ
-chase: đuổi theo
-cheap: giá rẻ
-cheat: lừa đảo
-check: kiểm tra
-cheek: má
-cheer: vui lên
-cheese: phô mai
-chef: đầu bếp
-chemical: hóa chất
-chemistry: hóa học
-chest: ngực
-chew: nhai
-chick: chick
-chicken: gà
-chief: giám đốc
-child: đứa trẻ
-childhood: thời thơ ấu
-children: bọn trẻ
-chill: làm lạnh
-chin: cái cằm
-Chinese: Trung Quốc
-chip: Chip
-chocolate: sô cô la
-choice: lựa chọn
-cholesterol: cholesterol
-choose: chọn
-chop: chặt
-chord: dây nhau
-Christian: Christian
-Christianity: Cơ đốc giáo
-Christmas: Giáng Sinh
-chronic: mãn tính
-chunk: mảnh
-church: nhà thờ
 dad: cha
 daily: hằng ngày
 dam: con đập
@@ -1046,7 +1094,6 @@ deliver: giao hàng
 delivery: chuyển
 demand: nhu cầu
 democracy: dân chủ
-Democrat: Dân chủ
 democratic: dân chủ
 demographic: nhân khẩu học
 demonstrate: chứng minh
@@ -1118,8 +1165,8 @@ differently: khác
 difficult: khó khăn
 difficulty: khó khăn
 dig: đào
-dignity: phẩm giá
 digital: kỹ thuật số
+dignity: phẩm giá
 dilemma: tình trạng khó xử
 dimension: kích thước
 diminish: suy giảm
@@ -1166,19 +1213,18 @@ distinct: khác biệt
 distinction: phân biệt
 distinctive: đặc biệt
 distinguish: phân biệt
-disturb: xáo trộn
-disturbing: phiền
 distract: làm mất tập trung
 distribute: phân phát
 distribution: phân phối
 district: huyện
+disturb: xáo trộn
+disturbing: phiền
 diverse: phong phú
 diversity: sự đa dạng
 divide: chia
 divine: thần thánh
 division: phân chia
 divorce: ly hôn
-DNA: DNA
 do: làm
 dock: bến tàu
 doctor: Bác sĩ
@@ -1193,11 +1239,11 @@ domain: miền
 domestic: trong nước
 dominant: có ưu thế
 dominate: thống trị
+don't: không
 donate: hiến tặng
 donation: Quyên góp
 done: làm xong
 donor: nhà tài trợ
-don't: không
 door: cửa
 doorway: lối vào
 dose: liều
@@ -1217,7 +1263,7 @@ dramatically: đột ngột
 draw: vẽ tranh
 drawer: ngăn kéo
 drawing: vẽ
-dream: mơ tưởng
+dream: uoc mo
 dress: trang phục
 dried: khô
 drift: trôi dạt
@@ -1240,11 +1286,11 @@ dumb: ngớ ngẩn
 dump: đổ
 during: suốt trong
 dust: bụi bặm
-Dutch: Người Hà Lan
 duty: nhiệm vụ
 dying: chết
 dynamic: năng động
 dynamics: động lực học
+e-mail: e-mail
 each: mỗi
 eager: hăng hái
 ear: tai
@@ -1260,6 +1306,7 @@ eastern: phương Đông
 easy: dễ dàng
 eat: ăn
 eating: Ăn
+echo: echo
 ecological: sinh thái
 economic: thuộc kinh tế
 economically: kinh tế
@@ -1267,7 +1314,6 @@ economics: Kinh tế học
 economist: nhà kinh tế học
 economy: nên kinh tê
 ecosystem: hệ sinh thái
-echo: echo
 edge: cạnh
 edit: chỉnh sửa
 edition: phiên bản
@@ -1310,7 +1356,6 @@ eliminate: loại bỏ
 elite: ưu tú
 else: khác
 elsewhere: ở nơi khác
-e-mail: e-mail
 embarrassed: xấu hổ
 embrace: ôm hôn
 emerge: hiện ra
@@ -1320,14 +1365,14 @@ emission: khí thải
 emotion: cảm xúc
 emotional: đa cảm
 emotionally: tình cảm
+emphasis: nhấn mạnh
+emphasize: nhấn mạnh
 empire: đế chế
 employ: thuê
 employee: Nhân viên
 employer: nhà tuyển dụng
 employment: việc làm
 empty: trống
-emphasis: nhấn mạnh
-emphasize: nhấn mạnh
 enable: cho phép
 enact: ban hành
 encounter: gặp gỡ
@@ -1341,6 +1386,12 @@ enemy: kẻ thù
 energy: năng lượng
 enforce: thi hành
 enforcement: thực thi
+engage: thuê
+engagement: hôn ước
+engine: động cơ
+engineer: kỹ sư
+engineering: kỹ thuật
+enhance: nâng cao
 enjoy: thưởng thức
 enormous: to lớn
 enough: đủ
@@ -1349,11 +1400,11 @@ ensure: đảm bảo
 enter: đi vào
 enterprise: doanh nghiệp
 entertainment: sự giải trí
+enthusiasm: hăng hái
 entire: toàn bộ
 entirely: hoàn toàn
 entitle: quyền lợi
 entity: thực thể
-enthusiasm: hăng hái
 entrance: cổng vào
 entrepreneur: doanh nhân
 entry: nhập cảnh
@@ -1361,13 +1412,6 @@ envelope: phong bì
 environment: môi trường
 environmental: môi trường
 envision: hình dung
-engage: thuê
-engagement: hôn ước
-engine: động cơ
-engineer: kỹ sư
-engineering: kỹ thuật
-English: Anh
-enhance: nâng cao
 epidemic: bệnh dịch
 episode: tập phim
 equal: công bằng
@@ -1396,7 +1440,6 @@ etc: vv
 ethical: đạo đức
 ethics: đạo đức
 ethnic: dân tộc
-European: Châu Âu
 evaluate: đánh giá
 evaluation: đánh giá
 even: cũng
@@ -1426,6 +1469,7 @@ excellent: Xuất sắc
 except: ngoại trừ
 exception: ngoại lệ
 excessive: quá đáng
+exchange: trao đổi, giao dịch
 excite: kích thích
 excited: bị kích thích
 excitement: sự phấn khích
@@ -1434,7 +1478,6 @@ exclude: loại trừ
 exclusive: độc quyền
 exclusively: duy nhất
 excuse: tha
-exchange: trao đổi, giao dịch
 execute: thi hành
 execution: chấp hành
 executive: điều hành
@@ -1502,7 +1545,6 @@ fair: hội chợ
 fairly: công bằng
 faith: đức tin
 fall: ngã
-FALSE: SAI
 fame: danh tiếng
 familiar: quen
 family: gia đình
@@ -1521,15 +1563,15 @@ faster: nhanh hơn
 fat: mập
 fatal: gây tử vong
 fate: số phận
-fatigue: mệt mỏi
 father: cha
+fatigue: mệt mỏi
 fault: lỗi
 favor: ủng hộ
 favorable: thuận lợi
 favorite: yêu thích
 fear: nỗi sợ
-feature: đặc tính
 feather: lông vũ
+feature: đặc tính
 federal: liên bang
 fee: chi phí
 feed: nuôi
@@ -1552,8 +1594,8 @@ fiction: viễn tưởng
 field: cánh đồng
 fierce: khốc liệt
 fifteen: mười lăm
-fifty: năm mươi
 fifth: thứ năm
+fifty: năm mươi
 fig: sung
 fight: chiến đấu
 fighter: đấu sĩ
@@ -1570,8 +1612,8 @@ financial: tài chính
 find: tìm thấy
 finding: Phát hiện
 fine: khỏe
-finish: hoàn thành
 finger: ngón tay
+finish: hoàn thành
 fire: ngọn lửa
 firm: chắc chắn
 firmly: vững chắc
@@ -1635,10 +1677,10 @@ formation: sự hình thành
 former: trước đây
 formerly: trước kia
 formula: công thức
+forth: ra
 fortunately: may mắn
 fortune: vận may
 forty: bốn mươi
-forth: ra
 forum: diễn đàn
 forward: phía trước
 foster: nuôi dưỡng
@@ -1648,8 +1690,8 @@ founder: người sáng lập
 four: bốn
 fourth: thứ tư
 fraction: phân số
-fragment: miếng
 fragile: mong manh
+fragment: miếng
 frame: khung
 framework: khuôn khổ
 franchise: nhượng quyền thương mại
@@ -1659,7 +1701,6 @@ free: miễn phí
 freedom: sự tự do
 freely: tự do
 freeze: Đông cứng
-French: người Pháp
 frequency: tần số
 frequent: Thường xuyên
 frequently: thường xuyên
@@ -1726,10 +1767,16 @@ gentle: dịu dàng
 gentleman: quý ông
 gently: dịu dàng
 genuine: chính hãng
-German: tiếng Đức
 gesture: cử chỉ
 get: được
 ghost: ma
+giant: khổng lồ
+gift: quà tặng
+gifted: năng khiếu
+girl: con gái
+girlfriend: bạn gái
+give: đưa cho
+given: được
 glad: vui vẻ
 glance: nháy mắt
 glass: ly
@@ -1741,7 +1788,6 @@ glove: găng tay
 go: đi
 goal: mục tiêu
 goat: con dê
-God: thần
 gold: vàng
 golden: vàng
 golf: golf
@@ -1775,7 +1821,6 @@ gray: màu xám
 great: tuyệt quá
 greatest: vĩ đại nhất
 greatly: rất nhiều
-Greek: người Hy Lạp
 green: màu xanh lá
 greet: chào hỏi
 grew: lớn lên
@@ -1803,14 +1848,8 @@ gun: súng
 gut: ruột
 guy: chàng
 gym: phòng thể dục
-giant: khổng lồ
-gift: quà tặng
-gifted: năng khiếu
-girl: con gái
-girlfriend: bạn gái
-give: đưa cho
-given: được
 ha: ha
+ha tinh: ha tinh
 habit: thói quen
 habitat: môi trường sống
 had: đã có
@@ -1863,7 +1902,7 @@ height: Chiều cao
 held: được tổ chức
 helicopter: máy bay trực thăng
 hell: Địa ngục
-hello: xin chào
+hello: xin chao
 helmet: mũ bảo hiểm
 help: Cứu giúp
 helpful: Hữu ích
@@ -1877,13 +1916,13 @@ hers: của cô ấy
 herself: cô ấy
 hesitate: do dự
 hey: Chào
-hi: Chào
+hi: xin chao
 hidden: ẩn
 hide: ẩn giấu
 high: cao
+high-tech: công nghệ cao
 highlight: Điểm nổi bật
 highly: cao
-high-tech: công nghệ cao
 highway: Xa lộ
 hike: đi lang thang
 hill: đồi núi
@@ -1893,7 +1932,6 @@ hint: dấu
 hip: hông
 hire: thuê mướn
 his: của anh ấy
-Hispanic: Người Hispanic
 historian: nhà sử học
 historic: mang tính lịch sử
 historical: lịch sử
@@ -1941,17 +1979,17 @@ human: Nhân loại
 humanity: nhân loại
 humor: hài hước
 hundred: hàng trăm
+hunger: đói
+hungry: đói bụng
 hunt: săn bắn
 hunter: thợ săn
 hunting: săn bắn
-hunger: đói
-hungry: đói bụng
 hurricane: bão
 hurry: vội
 hurt: đau
 husband: người chồng
 hypothesis: giả thuyết
-I: tôi
+i: toi
 ice: Nước đá
 icon: biểu tượng
 idea: ý kiến
@@ -1960,8 +1998,8 @@ identical: giống nhau
 identification: nhận biết
 identify: nhận định
 identity: danh tính
-ideology: hệ tư tưởng
 ideological: ý thức hệ
+ideology: hệ tư tưởng
 ie: nghĩa là
 if: nếu
 ignore: bỏ qua
@@ -1998,6 +2036,7 @@ improvement: cải tiến
 impulse: thúc đẩy
 in: trong
 incentive: khuyến khích
+inch: inch
 incident: biến cố
 include: bao gồm
 including: kể cả
@@ -2009,12 +2048,10 @@ increasing: tăng
 increasingly: ngày càng
 incredible: đáng kinh ngạc
 incredibly: vô cùng
-inch: inch
 indeed: thật
 independence: độc lập
 independent: độc lập
 index: mục lục
-Indian: người Ấn Độ
 indicate: biểu thị
 indication: dấu hiệu
 indicator: chỉ thị
@@ -2033,6 +2070,9 @@ inform: thông báo
 informal: không chính thức
 information: thông tin
 infrastructure: cơ sở hạ tầng
+ingredient: thành phần
+inherent: vốn có
+inherit: thừa kế
 initial: ban đầu
 initially: ban đầu
 initiate: bắt đầu
@@ -2092,7 +2132,6 @@ interfere: gây trở ngại
 interior: Nội địa
 internal: bên trong
 international: quốc tế
-Internet: Internet
 interpret: thông dịch
 interpretation: diễn dịch
 interrupt: làm gián đoạn
@@ -2120,39 +2159,27 @@ invite: mời gọi
 involve: liên quan
 involved: có tính liên quan
 involvement: sự tham gia
-ingredient: thành phần
-inherent: vốn có
-inherit: thừa kế
-Iraqi: Iraqi
-Irish: Người Ailen
 iron: bàn là
 ironically: trớ trêu thay
 irony: mỉa mai
 is: là
-Islam: đạo Hồi
-Islamic: Hồi giáo
 island: Đảo
 isolate: cô lập
 isolated: bị cô lập
 isolation: cô lập
-Israeli: Israeli
 issue: vấn đề
 it: nó
-Italian: người Ý
 item: mục
 its: của nó
 itself: chinh no
 jacket: Áo khoác
 jail: nhà giam
-Japanese: tiếng Nhật
 jar: lọ
 jaw: hàm
 jazz: jazz
 jeans: Quần jean
 jet: máy bay phản lực
-Jew: Người Do Thái
 jewelry: đồ trang sức
-Jewish: Người Do thái
 job: việc làm
 join: tham gia
 joint: chung
@@ -2167,8 +2194,8 @@ judgment: phán đoán
 judicial: tư pháp
 juice: Nước ép
 jump: nhảy
-junior: em
 jungle: rừng nhiệt đới
+junior: em
 jurisdiction: quyền hạn
 juror: bồi thẩm đoàn
 jury: ban bồi thẩm
@@ -2197,7 +2224,6 @@ knock: đánh
 know: biết
 knowledge: hiểu biết
 known: nổi tiếng
-Korean: Hàn Quốc
 lab: phòng thí nghiệm
 label: nhãn
 labor: lao động
@@ -2221,7 +2247,6 @@ last: Cuối cùng
 late: muộn
 lately: gần đây
 later: một lát sau
-Latin: Latin
 latter: sau này
 laugh: cười
 laughter: tiếng cười
@@ -2262,8 +2287,8 @@ legislature: cơ quan lập pháp
 legitimate: hợp pháp
 lemon: Chanh
 lend: cho vay
-lens: ống kính
 length: chiều dài
+lens: ống kính
 less: ít hơn
 lesson: bài học
 let: để cho
@@ -2346,10 +2371,10 @@ machine: máy móc
 mad: điên
 made: thực hiện
 magazine: tạp chí
+magic: ma thuật
 magnet: nam châm
 magnetic: từ tính
 magnitude: độ lớn
-magic: ma thuật
 mail: thư
 main: chủ yếu
 mainly: chủ yếu
@@ -2396,9 +2421,9 @@ master: bậc thầy
 match: trận đấu
 mate: người bạn đời
 material: vật chất
-matter: vấn đề
 math: môn Toán
 mathematics: toán học
+matter: vấn đề
 maximum: tối đa
 may: Tháng Năm
 maybe: có lẽ
@@ -2440,7 +2465,7 @@ menu: thực đơn
 merchant: thương gia
 mere: chỉ là
 merely: đơn thuần
-merit: n: Xứng đáng
+merit: n
 mess: lộn xộn
 message: thông điệp
 metal: kim loại
@@ -2448,7 +2473,6 @@ metaphor: phép ẩn dụ
 meter: mét
 method: phương pháp
 metropolitan: đô thị
-Mexican: Mexico
 middle: ở giữa
 middle-class: tầng lớp trung lưu
 midnight: nữa đêm
@@ -2512,12 +2536,12 @@ mortality: tử vong
 mortgage: thế chấp
 most: phần lớn
 mostly: chủ yếu
+mother: mẹ
 motion: chuyển động
 motivate: động viên
 motivation: động lực
 motive: động cơ
 motor: động cơ
-mother: mẹ
 mount: gắn kết
 mountain: núi
 mouse: chuột
@@ -2525,9 +2549,6 @@ mouth: miệng
 move: di chuyển
 movement: phong trào
 movie: bộ phim
-Mr: Ông
-Mrs: Bà
-Ms: Cô
 much: nhiều
 mud: bùn
 multiple: nhiều
@@ -2540,7 +2561,6 @@ mushroom: nấm
 music: Âm nhạc
 musical: âm nhạc
 musician: nhạc sĩ
-Muslim: Hồi giáo
 must: phải
 mutter: lẩm bẩm
 mutual: lẫn nhau
@@ -2549,6 +2569,7 @@ myself: riêng tôi
 mysterious: huyền bí
 mystery: huyền bí
 myth: huyền thoại
+n't: không
 nail: móng tay
 naked: trần truồng
 name: Tên
@@ -2619,14 +2640,13 @@ nose: mũi
 not: không phải
 note: chú thích
 notebook: sổ tay
+nothing: không có gì
 notice: để ý
 notion: khái niệm
-nothing: không có gì
 noun: danh từ
 novel: cuốn tiểu thuyết
 now: hiện nay
 nowhere: hư không
-n't: không
 nuclear: Nguyên tử
 number: con số
 numeral: số
@@ -2634,6 +2654,7 @@ numerous: nhiều
 nurse: y tá
 nut: hạt
 nutrient: chất dinh dưỡng
+o'clock: giờ
 oak: cây sồi
 object: vật
 objection: sự phản đối
@@ -2653,7 +2674,6 @@ occupation: nghề nghiệp
 occupy: chiếm
 occur: xảy ra
 ocean: đại dương
-o'clock: giờ
 odd: lẻ
 odds: tỷ lệ
 of: của
@@ -2674,17 +2694,15 @@ ok: được
 okay: đuợc
 old: cũ
 old-fashioned: Cổ hủ
-Olympic: Olympic
-Olympics: Thế vận hội
 on: trên
 once: Một lần
 one: một
 one-third: một phần ba
+ongoing: đang diễn ra
 onion: củ hành
 online: Trực tuyến
 only: chỉ có
 onto: trên
-ongoing: đang diễn ra
 open: mở
 opening: khai mạc
 openly: cởi mở
@@ -2765,7 +2783,6 @@ painting: bức vẽ
 pair: đôi
 palace: cung điện
 pale: nhợt nhạt
-Palestinian: Palestine
 palm: lòng bàn tay
 pan: chảo
 panel: bảng điều khiển
@@ -2803,16 +2820,15 @@ pastor: mục sư
 pat: vỗ vỗ
 patch: vá
 patent: bằng sáng chế
+path: con đường
 patience: kiên nhẫn
 patient: bệnh nhân
-pattern: mẫu
-path: con đường
 patrol: tuần tra
 patron: người bảo trợ
+pattern: mẫu
 pause: tạm ngừng
 pay: trả
 payment: thanh toán
-PC: PC
 peace: hòa bình
 peaceful: bình yên
 peak: cao điểm
@@ -2841,7 +2857,6 @@ period: giai đoạn
 permanent: dài hạn
 permission: sự cho phép
 permit: cho phép
-Persian: Người Ba Tư
 persist: tồn tại
 person: người
 personal: cá nhân
@@ -2851,6 +2866,20 @@ personnel: nhân viên
 perspective: quan điểm
 persuade: truy vấn
 pet: vật nuôi
+phase: giai đoạn
+phenomenon: hiện tượng
+philosophical: triết học
+philosophy: triết học
+phone: điện thoại
+photo: hình chụp
+photograph: ảnh chụp
+photographer: nhiếp ảnh gia
+photography: nhiếp ảnh
+phrase: cụm từ
+physical: vật lý
+physically: thể chất
+physician: bác sĩ
+physics: vật lý
 piano: đàn piano
 pick: chọn
 pickup: nhặt lên
@@ -2899,7 +2928,6 @@ plot: âm mưu
 plunge: lao xuống
 plural: số nhiều
 plus: thêm
-PM: PM
 pocket: bỏ túi
 poem: bài thơ
 poet: bài thơ
@@ -3070,9 +3098,9 @@ provider: các nhà cung cấp
 province: tỉnh
 provision: điều khoản
 provoke: kích động
-psychology: tâm lý học
 psychological: tâm lý
 psychologist: nhà tâm lý học
+psychology: tâm lý học
 public: công cộng
 publication: xuất bản
 publicity: công khai
@@ -3095,20 +3123,6 @@ pursuit: theo đuổi
 push: đẩy
 put: đặt
 puzzle: câu đố
-phase: giai đoạn
-phenomenon: hiện tượng
-philosophical: triết học
-philosophy: triết học
-phone: điện thoại
-photo: hình chụp
-photograph: ảnh chụp
-photographer: nhiếp ảnh gia
-photography: nhiếp ảnh
-phrase: cụm từ
-physical: vật lý
-physically: thể chất
-physician: bác sĩ
-physics: vật lý
 qualify: đủ tiêu chuẩn
 quality: phẩm chất
 quantity: số lượng
@@ -3145,8 +3159,8 @@ rally: biểu tình
 ran: chạy
 ranch: trang trại
 random: ngẫu nhiên
-rank: cấp
 range: phạm vi
+rank: cấp
 rape: hãm hiếp
 rapid: nhanh
 rapidly: nhanh chóng
@@ -3154,15 +3168,15 @@ rare: hiếm
 rarely: ít khi
 rat: con chuột
 rate: tỷ lệ
+rather: hơn
 rating: Xêp hạng
 ratio: tỉ lệ
 rational: hợp lý
-rather: hơn
 raw: thô
 re: lại
+reach: chạm tới
 react: phản ứng
 reaction: phản ứng
-reach: chạm tới
 read: đọc
 reader: người đọc
 readily: dễ dàng
@@ -3213,6 +3227,10 @@ regain: giành lại
 regard: quan tâm
 regarding: về
 regardless: bất kể
+regime: chế độ
+region: khu vực
+regional: khu vực
+register: ghi danh
 regret: hối tiếc
 regular: đều đặn
 regularly: thường xuyên
@@ -3220,10 +3238,6 @@ regulate: quy định
 regulation: Quy định
 regulator: người điều tiết
 regulatory: quy định
-regime: chế độ
-region: khu vực
-regional: khu vực
-register: ghi danh
 rehabilitation: phục hồi chức năng
 reinforce: củng cố
 reject: Từ chối
@@ -3271,7 +3285,6 @@ represent: đại diện
 representation: đại diện
 representative: Tiêu biểu
 republic: nước cộng hòa
-Republican: Đảng Cộng hòa
 republican: nhà nước cộng hòa
 reputation: uy tín
 request: yêu cầu
@@ -3314,8 +3327,8 @@ retain: giữ lại
 retire: về hưu
 retired: nghỉ hưu
 retirement: nghỉ hưu
-return: trở về
 retreat: rút lui
+return: trở về
 reveal: tiết lộ
 revelation: sự mặc khải
 revenue: thu nhập
@@ -3355,7 +3368,6 @@ rod: gậy
 role: vai trò
 roll: cuộn
 rolling: lăn
-Roman: Roman
 romance: lãng mạn
 romantic: lãng mạn
 roof: mái nhà
@@ -3382,7 +3394,6 @@ runner: người chạy
 running: đang chạy
 rural: nông thôn
 rush: vội vã
-Russian: Người Nga
 sack: bao
 sacred: Linh thiêng
 sacrifice: sự hy sinh
@@ -3423,6 +3434,11 @@ scatter: tiêu tan
 scenario: kịch bản
 scene: bối cảnh
 scent: hương thơm
+schedule: kế hoạch
+scheme: kế hoạch
+scholar: học giả
+scholarship: học bổng
+school: trường học
 science: khoa học
 scientific: thuộc về khoa học
 scientist: nhà khoa học
@@ -3436,11 +3452,6 @@ screening: kiểm tra
 screw: Đinh ốc
 script: kịch bản
 sculpture: điêu khắc
-schedule: kế hoạch
-scheme: kế hoạch
-scholar: học giả
-scholarship: học bổng
-school: trường học
 sea: biển
 seal: niêm phong
 search: Tìm kiếm
@@ -3471,7 +3482,6 @@ self-esteem: lòng tự trọng
 sell: bán
 seller: người bán
 seminar: hội thảo
-Senate: Thượng nghị viện
 senator: thượng nghị sĩ
 send: gửi
 senior: cao cấp
@@ -3542,10 +3552,10 @@ shop: cửa tiệm
 shopping: mua sắm
 shore: bờ biển
 short: ngắn
+short-term: thời gian ngắn
 shortage: sự thiếu
 shortly: ngay
 shorts: quần short
-short-term: thời gian ngắn
 shot: bắn
 should: Nên
 shoulder: vai
@@ -3584,10 +3594,10 @@ simply: đơn giản
 simultaneously: đồng thời
 sin: tội
 since: kể từ
-sink: bồn rửa
 sing: hát
 singer: ca sĩ
 single: Độc thân
+sink: bồn rửa
 sir: Ngài
 sister: em gái
 sit: ngồi
@@ -3630,10 +3640,10 @@ snap: chụp nhanh
 sneak: sneak
 snow: tuyết
 so: vì thế
+so-called: cái gọi là
 soak: ngâm
 soap: xà bông
 soar: bay lên
-so-called: cái gọi là
 soccer: bóng đá
 social: xã hội
 socially: xã hội
@@ -3658,9 +3668,9 @@ somebody: có ai
 someday: một ngày nào đó
 somehow: bằng cách nào đó
 someone: người nào
+something: cái gì đó
 sometime: thỉnh thoảng
 sometimes: đôi khi
-something: cái gì đó
 somewhat: phần nào
 somewhere: một vài nơi
 son: Con trai
@@ -3678,9 +3688,7 @@ southeast: Đông Nam
 southern: phía Nam
 southwest: tây nam
 sovereignty: chủ quyền
-Soviet: Liên Xô
 space: không gian
-Spanish: người Tây Ban Nha
 spare: phụ tùng
 spark: tia lửa
 speak: nói
@@ -3702,6 +3710,7 @@ speed: tốc độ
 spell: Đánh vần
 spend: tiêu
 spending: chi tiêu
+sphere: quả cầu
 spill: tràn
 spin: quay
 spine: xương sống
@@ -3719,10 +3728,9 @@ spot: nơi
 spouse: vợ / chồng
 spray: Xịt nước
 spread: Lan tràn
-sprinkle: rắc
 spring: mùa xuân
+sprinkle: rắc
 spy: gián điệp
-sphere: quả cầu
 squad: đội hình
 square: Quảng trường
 squeeze: bóp
@@ -3780,20 +3788,13 @@ store: cửa hàng
 storm: bão táp
 story: câu chuyện
 stove: bếp
-student: sinh viên
-studio: studio
-study: học
-stuff: đồ đạc
-stumble: tình cờ gặp
-stupid: ngốc nghếch
-style: Phong cách
 straight: thẳng
 straighten: làm thẳng
 strain: sự căng thẳng, quá tải
 strange: kỳ lạ
 stranger: lạ
-strategy: chiến lược
 strategic: chiến lược
+strategy: chiến lược
 straw: Rơm rạ
 streak: streak
 stream: suối
@@ -3814,6 +3815,13 @@ strongly: mạnh mẽ
 structural: cấu trúc
 structure: kết cấu
 struggle: đấu tranh
+student: sinh viên
+studio: studio
+study: học
+stuff: đồ đạc
+stumble: tình cờ gặp
+stupid: ngốc nghếch
+style: Phong cách
 subject: môn học
 submit: đệ trình
 subsequent: sau đó
@@ -3829,8 +3837,8 @@ succeed: thành công
 success: sự thành công
 successful: thành công
 successfully: thành công
-suck: hút
 such: như là
+suck: hút
 sudden: đột nhiên
 suddenly: đột ngột
 sue: kiện
@@ -3864,7 +3872,6 @@ supportive: hỗ trợ
 suppose: giả sử
 supposed: giả định
 supposedly: được cho là
-Supreme: Tối cao
 sure: chắc chắn rồi
 surely: chắc chắn
 surface: bề mặt
@@ -3937,8 +3944,8 @@ teaspoon: muỗng cà phê
 technical: kỹ thuật
 technician: kỹ thuật viên
 technique: kỹ thuật
-technology: Công nghệ
 technological: công nghệ
+technology: Công nghệ
 teen: thiếu niên
 teenage: thiếu niên
 teenager: thiếu niên
@@ -3974,6 +3981,54 @@ testing: thử nghiệm
 text: bản văn
 textbook: sách giáo khoa
 texture: kết cấu
+than: hơn
+thank: cảm tạ
+thanks: cảm ơn
+that: cái đó
+the: các
+theater: rạp hát
+their: họ
+them: họ
+theme: chủ đề
+themselves: bản thân họ
+then: sau đó
+theological: thần học
+theology: thần học
+theoretical: lý thuyết
+theory: lý thuyết
+therapist: nhà trị liệu
+therapy: trị liệu
+there: ở đó
+thereby: bằng cách ấy
+therefore: vì thế
+these: những
+they: họ
+thick: dày
+thigh: đùi
+thin: gầy
+thing: Điều
+think: suy nghĩ
+thinking: Suy nghĩ
+third: thứ ba
+thirty: ba mươi
+this: điều này
+thoroughly: triệt để
+those: những, cái đó
+though: Tuy nhiên
+thought: nghĩ
+thousand: nghìn
+thread: chủ đề
+threat: mối đe dọa
+threaten: hăm dọa
+three: số ba
+threshold: ngưỡng
+thrive: phát đạt
+throat: họng
+through: xuyên qua
+throughout: khắp
+throw: ném
+thumb: ngón tay cái
+thus: do đó
 ticket: vé
 tide: thủy triều
 tie: cà vạt
@@ -4004,8 +4059,8 @@ toll: số điện thoại
 tomato: cà chua
 tomorrow: Ngày mai
 tone: tấn
-tonight: tối nay
 tongue: lưỡi
+tonight: tối nay
 too: quá
 took: lấy
 tool: dụng cụ
@@ -4029,75 +4084,6 @@ tower: Tháp
 town: thị trấn
 toxic: chất độc
 toy: đồ chơi
-T-shirt: Áo thun
-tube: ống
-tuck: tuck
-tumor: khối u
-tune: điều chỉnh
-tunnel: đường hầm
-turkey: gà tây
-turn: xoay
-TV: TV
-twelve: mười hai
-twentieth: hai mươi
-twenty: hai mươi
-twice: hai lần
-twin: đôi
-twist: xoắn
-two: hai
-two-thirds: hai phần ba
-type: kiểu
-typical: điển hình
-typically: thường
-than: hơn
-thank: cảm tạ
-thanks: cảm ơn
-Thanksgiving: Lễ Tạ ơn
-that: cái đó
-the: các
-theater: rạp hát
-their: họ
-them: họ
-theme: chủ đề
-themselves: bản thân họ
-then: sau đó
-theology: thần học
-theological: thần học
-theoretical: lý thuyết
-theory: lý thuyết
-therapist: nhà trị liệu
-therapy: trị liệu
-there: ở đó
-thereby: bằng cách ấy
-therefore: vì thế
-these: những
-they: họ
-thick: dày
-thigh: đùi
-thin: gầy
-think: suy nghĩ
-thinking: Suy nghĩ
-thing: Điều
-third: thứ ba
-thirty: ba mươi
-this: điều này
-thoroughly: triệt để
-those: những, cái đó
-though: Tuy nhiên
-thought: nghĩ
-thousand: nghìn
-thread: chủ đề
-threat: mối đe dọa
-threaten: hăm dọa
-three: số ba
-threshold: ngưỡng
-thrive: phát đạt
-throat: họng
-through: xuyên qua
-throughout: khắp
-throw: ném
-thumb: ngón tay cái
-thus: do đó
 trace: dấu vết
 track: theo dõi
 trade: buôn bán
@@ -4153,12 +4139,29 @@ tropical: nhiệt đới
 trouble: rắc rối
 troubled: gặp rắc rối
 truck: xe tải
-TRUE: THẬT
 truly: thực sự
 trunk: Thân cây
 trust: Lòng tin
 truth: sự thật
 try: thử
+tube: ống
+tuck: tuck
+tumor: khối u
+tune: điều chỉnh
+tunnel: đường hầm
+turkey: gà tây
+turn: xoay
+twelve: mười hai
+twentieth: hai mươi
+twenty: hai mươi
+twice: hai lần
+twin: đôi
+twist: xoắn
+two: hai
+two-thirds: hai phần ba
+type: kiểu
+typical: điển hình
+typically: thường
 ugly: xấu xí
 uh: uh
 ultimate: tối hậu
@@ -4182,12 +4185,12 @@ unexpected: bất ngờ
 unfair: không công bằng
 unfold: mở ra
 unfortunately: không may
+unhappy: không vui
 uniform: đồng phục
 union: liên hiệp
 unique: độc nhất
 unit: đơn vị
 unite: thống nhất
-United: United
 unity: thống nhất
 universal: phổ cập
 universe: vũ trụ
@@ -4199,7 +4202,6 @@ unlikely: không chắc
 unprecedented: chưa từng có
 until: cho đến
 unusual: bất thường
-unhappy: không vui
 up: lên
 update: cập nhật
 upon: trên
@@ -4370,26 +4372,26 @@ win: thắng lợi
 wind: gió
 window: cửa sổ
 wine: rượu nho
+wing: canh
 winner: người chiến thắng
 winter: mùa đông
-wing: canh
 wipe: lau
 wire: dây điện
 wisdom: sự khôn ngoan
 wise: khôn ngoan
 wish: muốn
-witness: nhân chứng
 with: với
 withdraw: thu hồi
 withdrawal: thu hồi
 within: bên trong
 without: không có
+witness: nhân chứng
 wolf: chó sói
 woman: đàn bà
 women: đàn bà
+won't: sẽ không
 wonder: ngạc nhiên
 wonderful: Tuyệt vời
-won't: sẽ không
 wood: gỗ
 wooden: bằng gỗ
 word: từ
@@ -4433,3 +4435,4 @@ yours: của bạn
 yourself: bản thân bạn
 youth: thiếu niên
 zone: vùng
+zoo: so thu

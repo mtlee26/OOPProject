@@ -5,21 +5,15 @@ import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.*;
 
 public class DictionaryManagement {
     private Dictionary dictionary = new Dictionary();
 
-    public void insertFromCommandline() {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        sc.nextLine();
-        for (int i = 0; i < num; i++) {
-            String target = sc.nextLine().toLowerCase();
-            String explain = sc.nextLine().toLowerCase();
-            Word wordInput = new Word(target, explain);
-            dictionary.add(wordInput);
-        }
+    public void insertFromCommandline(String wordTarget, String wordExplain) {
+        dictionary.getWordList().put(wordTarget, wordExplain);
     }
 
     public void insertFromFile() {
@@ -41,34 +35,50 @@ public class DictionaryManagement {
         System.out.println(dictionary.size());
     }
 
-    public String dictionaryLookup(String word_target) {
-        return dictionary.getMeaning(word_target);
+    public String dictionaryLookup(String wordTarget) {
+        return dictionary.getMeaning(wordTarget);
     }
 
-    public ObservableList<String> dictionarySearcher(String word_input) {
+    public ObservableList<String> dictionarySearcher(String wordInput) {
         ObservableList<String> suggestList = FXCollections.observableArrayList();
         for (String x : dictionary.getWordList().keySet()) {
-            if(x.startsWith(word_input)) {
+            if(x.startsWith(wordInput)) {
                 suggestList.add(x);
             }
         }
         return suggestList;
     }
 
-    public void addNewWord() {
-
+    public void addNewWord(String newWord, String wordExplain) {
+        dictionary.getWordList().put(newWord, wordExplain);
+        dictionaryExportToFile();
     }
 
-    public void changeWord() {
-
+    public void changeWord(String wordChange, String wordExplain) {
+        dictionary.getWordList().replace(wordChange, wordExplain);
+        dictionaryExportToFile();
     }
 
     public void deleteWord(String word) {
         dictionary.remove(word);
+        dictionaryExportToFile();
     }
 
     public void dictionaryExportToFile() {
-
+        try {
+            String fileName = "./src/main/resources/dictionaries.txt";
+            FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+            for (String x : dictionary.getWordList().keySet()) {
+                String wordExplain = dictionary.getWordList().get(x);
+                String word = x + ": " + wordExplain + "\n";
+                fileOutputStream.write(word.getBytes());
+            }
+            fileOutputStream.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
     public void showAllWords() {
@@ -76,12 +86,15 @@ public class DictionaryManagement {
     }
 
     //test
-//    public static void main(String[] args) {
-//        DictionaryManagement dm = new DictionaryManagement();
-//        dm.insertFromFile();
-//        Scanner sc = new Scanner(System.in);
-//        String input = sc.nextLine();
-//        ArrayList<String> ans = dm.dictionarySearcher(input);
-//        System.out.println(ans);
-//    }
+    public static void main(String[] args) {
+        DictionaryManagement dm = new DictionaryManagement();
+        dm.insertFromFile();
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String explain = sc.nextLine();
+        dm.addNewWord(input, explain);
+        //dm.changeWord(input, explain);
+
+        System.out.println(dm.dictionaryLookup(input));
+    }
 }
