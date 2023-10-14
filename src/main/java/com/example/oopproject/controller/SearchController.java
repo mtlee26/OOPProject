@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SearchController implements Initializable{
+public class SearchController implements Initializable {
     private DictionaryManagement dictionaryManagement = new DictionaryManagement();
     private String word_input;
     ObservableList<String> listResults = FXCollections.observableArrayList();
