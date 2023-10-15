@@ -9,7 +9,7 @@
             <tabs>
                 <Tab text="  Dictionary  ">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="container" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <Pane layoutX="156.0" layoutY="20.0" prefHeight="52.0" prefWidth="279.0" AnchorPane.bottomAnchor="289.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="20.0">
                            <children>
