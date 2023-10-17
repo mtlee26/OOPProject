@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.oopproject.controller.AddWordController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.AddWordController">
+   <children>
+      <TextArea fx:id="newWordTargetField" layoutX="93.0" layoutY="45.0" prefHeight="88.0" prefWidth="442.0" promptText="Type new word here" />
+      <TextArea fx:id="newWordExplainField" layoutX="95.0" layoutY="163.0" prefHeight="157.0" prefWidth="442.0" promptText="Type new word meaning here" />
+      <Label layoutX="10.0" layoutY="69.0" prefHeight="42.0" prefWidth="67.0" text="New word" />
+      <Label layoutX="8.0" layoutY="216.0" prefHeight="42.0" prefWidth="79.0" text="New meaning" />
+      <Button fx:id="saveAddWordButton" layoutX="158.0" layoutY="336.0" mnemonicParsing="false" onAction="#onSaveAddWordButtonClick" text="Save" />
+      <Button fx:id="cancelAddWordButton" layoutX="368.0" layoutY="336.0" mnemonicParsing="false" onAction="#onCancelAddWordButtonClick" text="Cancel" />
+      <Button fx:id="exitAddWordButton" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExitAddWordButtonClick" prefHeight="25.0" prefWidth="33.0" text="x" />
+   </children>
 </AnchorPane>

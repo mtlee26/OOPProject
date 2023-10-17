@@ -45,12 +45,13 @@ public class Database {
             ps.setString(1, wordInput);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                wordExplain = rs.getString("definition");
+                String html = rs.getString("definition");
+                wordExplain = dictionary.htmlToText(html);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return dictionary.htmlToText(wordExplain);
+        return wordExplain;
     }
 
     public void addWord(String wordTarget, String wordExplain) {

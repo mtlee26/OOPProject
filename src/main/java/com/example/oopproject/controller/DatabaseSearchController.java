@@ -7,18 +7,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-public class DatabaseSearchController implements Initializable {
-    private Database database = new Database();
+
+public class DatabaseSearchController extends Controller implements Initializable {
+//    private Database database = new Database();
     private String wordInput;
     ObservableList<String> listResults = FXCollections.observableArrayList();
 
@@ -34,6 +29,8 @@ public class DatabaseSearchController implements Initializable {
     private Button saveChangeButton;
     @FXML
     private Button cancelChangeButton;
+    @FXML
+    private Label alertNotFound;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -54,10 +51,21 @@ public class DatabaseSearchController implements Initializable {
     }
 
     @FXML
+    public void onEnter() {
+        onSearchButtonClick();
+    }
+
+    @FXML
     public void onSearchButtonClick() {
         wordInput = searchField.getText().trim().toLowerCase();
         String wordExplain = database.databaseLookup(wordInput);
-        meaningBox.setText(wordExplain);
+        if (wordExplain == null) {
+            alertNotFound.setVisible(true);
+            meaningBox.clear();
+        } else {
+            meaningBox.setText(wordExplain);
+            alertNotFound.setVisible(false);
+        }
     }
 
     @FXML
@@ -95,9 +103,12 @@ public class DatabaseSearchController implements Initializable {
 
     @FXML
     public void onDeleteButtonClick() {
-        database.deleteWord(wordInput);
-        refresh();
-        //thong bao delete successfully
+        if (wordInput != null) {
+            database.deleteWord(wordInput);
+            refresh();
+            //thong bao delete successfully
+        }
+
     }
 
     public void refresh() {
@@ -105,4 +116,8 @@ public class DatabaseSearchController implements Initializable {
         meaningBox.clear();
     }
 
+    @FXML
+    public void onAddButtonClick(ActionEvent actionEvent) {
+        setScene(actionEvent, "/Views/AddWordView.fxml");
+    }
 }
