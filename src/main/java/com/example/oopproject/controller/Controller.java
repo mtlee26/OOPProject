@@ -27,10 +27,10 @@ public abstract class Controller {
         }
     }
 
-    public void setNode(Pane root, Node node) {
-        root.getChildren().clear();
-        root.getChildren().add(node);
-    }
+//    public void setNode(Pane root, Node node) {
+//        root.getChildren().clear();
+//        root.getChildren().add(node);
+//    }
 
 //    public void setScene(String pathName, Pane root) {
 //        try {
@@ -41,7 +41,3 @@ public abstract class Controller {
 //        }
 //    }
 
-//    public void setStyle(Scene scene) {
-//        scene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
-//    }
-}
