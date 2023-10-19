@@ -1,7 +1,5 @@
 package com.example.oopproject.dictionary;
 
-
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;

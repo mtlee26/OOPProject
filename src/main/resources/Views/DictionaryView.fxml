@@ -17,14 +17,14 @@
                                         <TextField fx:id="searchField" layoutX="21.0" layoutY="11.0" onAction="#onEnter" prefHeight="30.0" prefWidth="165.0" promptText="Enter Any Word" />
                                         <Button fx:id="searchButton" layoutX="202.0" layoutY="11.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="30.0" prefWidth="40.0" text="ok" />
                            </children></Pane>
-                                <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="90.0">
+                                <Pane layoutX="14.0" layoutY="80.0" prefHeight="271.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="80.0">
                                     <children>
-                                        <ListView fx:id="suggestList" layoutX="16.0" layoutY="15.0" onMouseClicked="#onMouseClickedSuggestList" prefHeight="185.0" prefWidth="177.0" />
+                                        <ListView fx:id="suggestList" layoutX="16.0" layoutY="15.0" onMouseClicked="#onMouseClickedSuggestList" prefHeight="251.0" prefWidth="177.0" />
                                     </children>
                                 </Pane>
-                                <Pane layoutX="306.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="100.0">
+                                <Pane layoutX="242.0" layoutY="100.0" prefHeight="200.0" prefWidth="333.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
                                     <children>
-                                        <TextArea fx:id="meaningBox" editable="false" layoutX="12.0" layoutY="6.0" prefHeight="190.0" prefWidth="177.0" promptText="Meaning" />
+                                        <TextArea fx:id="meaningBox" editable="false" layoutX="7.0" layoutY="6.0" prefHeight="190.0" prefWidth="320.0" promptText="Meaning" />
                                     </children>
                                 </Pane>
                         <Button fx:id="changeButton" layoutX="317.0" layoutY="72.0" mnemonicParsing="false" onAction="#onChangeButtonClick" text="edit" />
@@ -37,6 +37,7 @@
                               <ImageView fitHeight="33.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
                            </graphic>
                         </Label>
+                        <Button fx:id="soundButton" layoutX="526.0" layoutY="72.0" mnemonicParsing="false" onAction="#onSoundButton" prefHeight="25.0" prefWidth="25.0" text=":)))" />
                             </children></AnchorPane>
                     </content>
                 </Tab>

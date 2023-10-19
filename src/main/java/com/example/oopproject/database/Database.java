@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 
 public class Database {
-    private String url = "jdbc:mysql://localhost:3306/EVdictionary";
+    private String url = "jdbc:mysql://localhost:3306/evdictionary";
     private String user = "root";
     private String password = "letam_2624";
     private Connection connection;

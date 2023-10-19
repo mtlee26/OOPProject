@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.example.oopproject.dictionary.TextToSpeech.playSoundGoogleTranslateEnToVi;
+
 public class DatabaseSearchController extends Controller implements Initializable {
 //    private Database database = new Database();
     private String wordInput;
@@ -119,5 +121,10 @@ public class DatabaseSearchController extends Controller implements Initializabl
     @FXML
     public void onAddButtonClick(ActionEvent actionEvent) {
         setScene(actionEvent, "/Views/AddWordView.fxml");
+    }
+
+    @FXML
+    public void onSoundButton() {
+        playSoundGoogleTranslateEnToVi(wordInput);
     }
 }
