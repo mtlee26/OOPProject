@@ -36,12 +36,6 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        searchField.setOnKeyTyped(eventHandler -> {
-            handleOnKeyTyped();
-        });
-    }
-
-    public void handleOnKeyTyped() {
         searchField.textProperty().addListener((observable, oldValue, newValue)-> {
             listResults.clear();
             if (!newValue.isBlank()) {
@@ -73,9 +67,11 @@ public class DatabaseSearchController extends Controller implements Initializabl
     @FXML
     public void onMouseClickedSuggestList() {
         wordInput = suggestList.getSelectionModel().getSelectedItem();
-        searchField.setText(wordInput);
-        String wordExplain = database.databaseLookup(wordInput);
-        meaningBox.setText(wordExplain);
+        if (wordInput != null) {
+            searchField.setText(wordInput);
+            String wordExplain = database.databaseLookup(wordInput);
+            meaningBox.setText(wordExplain);
+        }
     }
 
     @FXML
@@ -125,6 +121,7 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @FXML
     public void onSoundButton() {
+        wordInput = searchField.getText().trim().toLowerCase();
         playSoundGoogleTranslateEnToVi(wordInput);
     }
 }
