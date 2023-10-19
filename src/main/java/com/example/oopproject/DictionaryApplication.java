@@ -17,10 +17,11 @@ public class DictionaryApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent rootDictionary = FXMLLoader.load(getClass().getResource("/Views/Menu.fxml"));
-        Scene dictionaryScene = new Scene(rootDictionary);
+        Parent root = FXMLLoader.load(getClass().getResource("/Views/Menu.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
         primaryStage.setTitle("Dictionary Application");
-        primaryStage.setScene(dictionaryScene);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 }

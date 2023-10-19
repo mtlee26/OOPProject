@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.DatabaseSearchController">
@@ -11,9 +12,9 @@
                     <content>
                         <AnchorPane fx:id="container" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <Pane layoutX="156.0" layoutY="20.0" prefHeight="52.0" prefWidth="279.0" AnchorPane.bottomAnchor="289.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="20.0">
+                                <Pane layoutX="156.0" layoutY="20.0" prefHeight="69.0" prefWidth="279.0" AnchorPane.bottomAnchor="272.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="20.0">
                            <children>
-                                        <TextField fx:id="searchField" layoutX="21.0" layoutY="11.0" prefHeight="30.0" prefWidth="165.0" promptText="Enter Any Word" />
+                                        <TextField fx:id="searchField" layoutX="21.0" layoutY="11.0" onAction="#onEnter" prefHeight="30.0" prefWidth="165.0" promptText="Enter Any Word" />
                                         <Button fx:id="searchButton" layoutX="202.0" layoutY="11.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="30.0" prefWidth="40.0" text="ok" />
                            </children></Pane>
                                 <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="90.0">
@@ -27,10 +28,15 @@
                                     </children>
                                 </Pane>
                         <Button fx:id="changeButton" layoutX="317.0" layoutY="72.0" mnemonicParsing="false" onAction="#onChangeButtonClick" text="edit" />
-                        <Button fx:id="addButton" layoutX="380.0" layoutY="72.0" mnemonicParsing="false" text="add" />
+                        <Button fx:id="addButton" layoutX="380.0" layoutY="72.0" mnemonicParsing="false" onAction="#onAddButtonClick" text="add" />
                         <Button fx:id="deleteButton" layoutX="444.0" layoutY="72.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="delete" />
                         <Button fx:id="saveChangeButton" layoutX="340.0" layoutY="308.0" mnemonicParsing="false" onAction="#onSaveChangeButtonClick" text="save" visible="false" />
                         <Button fx:id="cancelChangeButton" layoutX="418.0" layoutY="308.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="cancel" visible="false" />
+                        <Label fx:id="alertNotFound" layoutX="177.0" layoutY="63.0" prefHeight="10.0" prefWidth="135.0" text="Not found" visible="false">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Label>
                             </children></AnchorPane>
                     </content>
                 </Tab>
