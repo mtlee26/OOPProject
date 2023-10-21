@@ -66,10 +66,9 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @FXML
     public void onMouseClickedSuggestList() {
-        wordInput = suggestList.getSelectionModel().getSelectedItem();
-        if (wordInput != null) {
-            searchField.setText(wordInput);
-            String wordExplain = database.databaseLookup(wordInput);
+        String word = suggestList.getSelectionModel().getSelectedItem();
+        if (word != null) {
+            String wordExplain = database.databaseLookup(word);
             meaningBox.setText(wordExplain);
         }
     }
