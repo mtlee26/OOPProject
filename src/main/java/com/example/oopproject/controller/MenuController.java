@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
 public class MenuController extends Controller {
-//    @FXML
+    //    @FXML
 //    private AnchorPane root;
     @FXML
     public void onDictionaryButtonClick(ActionEvent actionEvent) {
@@ -18,4 +18,7 @@ public class MenuController extends Controller {
         setScene(actionEvent, "/Views/Game.fxml");
         //setScene("/Views/DictionaryView.fxml", root);
     }
+
+
+
 }
