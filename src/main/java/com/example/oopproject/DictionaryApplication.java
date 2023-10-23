@@ -1,6 +1,6 @@
 package com.example.oopproject;
 
-import com.example.oopproject.database.Database;
+import com.example.oopproject.game.GameManagement;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -1,4 +1,15 @@
 package com.example.oopproject.controller;
 
-public class GameController {
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class GameController extends Controller {
+    @FXML
+    public void onSoccer(ActionEvent actionEvent) {
+        setScene(actionEvent, "/Views/SoccerView.fxml");
+    }
+
+//    public abstract void playAgain();
+//
+//    public abstract void Exit();
 }
