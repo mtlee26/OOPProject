@@ -89,6 +89,5 @@ public class TranslatorApi {
             System.out.println("Vietnamese: " + vietnameseText);
             System.out.println("English: " + englishTranslation);
         }*/
-
 }
 
