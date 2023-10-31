@@ -1,5 +1,6 @@
-package com.example.oopproject.controller;
+package com.example.oopproject.controller.dictionary;
 
+import com.example.oopproject.controller.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -32,12 +32,5 @@ public abstract class Controller {
 //        root.getChildren().add(node);
 //    }
 
-//    public void setScene(String pathName, Pane root) {
-//        try {
-//            AnchorPane component = FXMLLoader.load(getClass().getResource(pathName));
-//            setNode(root, component);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
     }
 

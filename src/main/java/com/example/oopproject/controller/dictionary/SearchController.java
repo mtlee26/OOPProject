@@ -1,4 +1,4 @@
-package com.example.oopproject.controller;
+package com.example.oopproject.controller.dictionary;
 
 import com.example.oopproject.dictionary.DictionaryManagement;
 import javafx.collections.FXCollections;

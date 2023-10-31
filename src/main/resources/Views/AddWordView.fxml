@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.AddWordController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.dictionary.AddWordController">
    <children>
       <TextArea fx:id="newWordTargetField" layoutX="93.0" layoutY="45.0" prefHeight="88.0" prefWidth="442.0" promptText="Type new word here" />
       <TextArea fx:id="newWordExplainField" layoutX="95.0" layoutY="163.0" prefHeight="157.0" prefWidth="442.0" promptText="Type new word meaning here" />

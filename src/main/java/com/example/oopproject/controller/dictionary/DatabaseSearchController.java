@@ -1,6 +1,8 @@
-package com.example.oopproject.controller;
+package com.example.oopproject.controller.dictionary;
 
+import com.example.oopproject.controller.Controller;
 import com.example.oopproject.database.Database;
+import com.example.oopproject.dictionary.TranslatorApi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -33,6 +35,10 @@ public class DatabaseSearchController extends Controller implements Initializabl
     private Button cancelChangeButton;
     @FXML
     private Label alertNotFound;
+    @FXML
+    private TextArea sourceArea;
+    @FXML
+    private TextArea meaningArea;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -122,5 +128,12 @@ public class DatabaseSearchController extends Controller implements Initializabl
     public void onSoundButton() {
         wordInput = searchField.getText().trim().toLowerCase();
         playSoundGoogleTranslateEnToVi(wordInput);
+    }
+
+    @FXML
+    public void onClickTranslate() {
+        String source = sourceArea.getText();
+        String translate = TranslatorApi.translateEnToVi(source);
+        meaningArea.setText(translate);
     }
 }
