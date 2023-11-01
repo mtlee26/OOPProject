@@ -25,33 +25,33 @@ public class Keeper extends AnimationEntity {
     }
 
     public Sprite chooseSprite() {
-//        switch (direction) {
-//            case CENTER -> {
-//                //sprite = Sprite.keeper;
-//                sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, Sprite.keeper_2, animate, 20);
-//            }
-//            case LEFT -> {
-//                if (isHit) {
-//                    //sprite = Sprite.keeper_hit_left;
-//                    sprite = Sprite.movingSprite(Sprite.keeper_hit_left, Sprite.keeper_hit_left_1, Sprite.keeper_hit_letf_2, animate, 20);
-//                } else {
-//                    sprite = Sprite.movingSprite(Sprite.keeper_miss_left, Sprite.keeper_miss_left_1, Sprite.keeper_miss_letf_2, animate, 20);
-//                }
-//            }
-//            case RIGHT -> {
-//                if (isHit) {
-//                    //sprite = Sprite.keeper_hit_right;
-//                    sprite = Sprite.movingSprite(Sprite.keeper_hit_right, Sprite.keeper_hit_right_1, Sprite.keeper_hit_right_2, animate, 20);
-//                } else {
-//                    sprite = Sprite.movingSprite(Sprite.keeper_miss_right, Sprite.keeper_miss_right_1, Sprite.keeper_miss_right_2, animate, 20);
-//                }
-//            }
-//            default -> {
-//                //sprite = Sprite.keeper;
-//                sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, Sprite.keeper_2, animate, 20);            }
-//        }
-//        return sprite;
-        return null;
+        switch (direction) {
+            case CENTER -> {
+                //sprite = Sprite.keeper;
+                sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, animate, 20);
+            }
+            case LEFT -> {
+                if (isHit) {
+                    //sprite = Sprite.keeper_hit_left;
+                    sprite = Sprite.movingSprite(Sprite.keeper_hit_left, Sprite.keeper_hit_left_1, animate, 20);
+                } else {
+                    sprite = Sprite.movingSprite(Sprite.keeper_miss_left, Sprite.keeper_miss_left_1, animate, 20);
+                }
+            }
+            case RIGHT -> {
+                if (isHit) {
+                    //sprite = Sprite.keeper_hit_right;
+                    sprite = Sprite.movingSprite(Sprite.keeper_hit_right, Sprite.keeper_hit_right_1, animate, 20);
+                } else {
+                    sprite = Sprite.movingSprite(Sprite.keeper_miss_right, Sprite.keeper_miss_right_1, animate, 20);
+                }
+            }
+            default -> {
+                //sprite = Sprite.keeper;
+                sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, animate, 20);            }
+        }
+        return sprite;
+        //return null;
     }
 
     //        public Image chooseSprite() {

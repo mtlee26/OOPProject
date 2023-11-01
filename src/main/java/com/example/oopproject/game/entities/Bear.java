@@ -28,9 +28,10 @@ public class Bear extends AnimationEntity {
 
     @Override
     public Sprite chooseSprite() {
-        if (animate < MAX_ANIMATE) animate++;
-        else animate = 0;
-        System.out.println(animate);
+//        if (animate < MAX_ANIMATE) animate++;
+//        else animate = 0;
+        //System.out.println(animate);
+        animate();
         sprite = Sprite.movingSprite(Sprite.bear1, Sprite.bear2, animate, 100);
         return sprite;
     }

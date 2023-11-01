@@ -50,9 +50,11 @@ public class SoccerController extends GameController implements Initializable {
         gm.insertFromFile();
         Collections.shuffle(questionList);
         displayQuestion(new ActionEvent());
+        Canvas canvas = new Canvas(600, 400);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
         scoreField.setText("Score: " + score);
-        soccer.render();
-        root.getChildren().add(soccer.canvas);
+        soccer.render(gc);
+        root.getChildren().add(canvas);
     }
 
     public void clickAnswer(Button button, ActionEvent actionEvent) {

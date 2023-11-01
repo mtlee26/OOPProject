@@ -9,8 +9,8 @@ import javafx.scene.canvas.GraphicsContext;
 public class Soccer {
     private Keeper keeper;
     //private Ball ball;
-    private GraphicsContext gc;
-    public Canvas canvas;
+    //private GraphicsContext gc;
+    //public Canvas canvas;
 
     public Soccer() {
         keeper = new Keeper(10, 10, Sprite.keeper.getFxImage(), false);
@@ -26,10 +26,10 @@ public class Soccer {
         //ball.setDirection(direction);
     }
 
-    public void render() {
-        canvas = new Canvas(50, 50);
-        gc = canvas.getGraphicsContext2D();
-        //keeper.update();
+    public void render(GraphicsContext gc) {
+//        canvas = new Canvas(50, 50);
+//        gc = canvas.getGraphicsContext2D();
+//        //keeper.update();
         keeper.render(gc);
     }
 

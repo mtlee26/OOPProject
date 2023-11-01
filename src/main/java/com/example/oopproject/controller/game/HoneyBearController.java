@@ -31,6 +31,7 @@ public class HoneyBearController extends Controller implements Initializable {
         Canvas canvas = new Canvas(320, 320);
         gc = canvas.getGraphicsContext2D();
         rootGame.getChildren().add(canvas);
+        //Scene scene1 = new Scene(rootGame, 320, 320);
         //KeyEvent keyEvent = scene.
         //game.render(gc);
         AnimationTimer gameLoop = new AnimationTimer() {
