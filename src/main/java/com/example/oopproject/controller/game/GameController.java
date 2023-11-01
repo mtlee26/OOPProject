@@ -10,6 +10,11 @@ public class GameController extends Controller {
         setScene(actionEvent, "/Views/SoccerView.fxml");
     }
 
+    @FXML
+    public void onClickHoneyBear(ActionEvent actionEvent) {
+        setScene(actionEvent, "/Views/HoneyBear.fxml");
+    }
+
 //    public abstract void playAgain();
 //
 //    public abstract void Exit();

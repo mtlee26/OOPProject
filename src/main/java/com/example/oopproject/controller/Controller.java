@@ -14,11 +14,13 @@ import java.io.IOException;
 
 public abstract class Controller {
     protected Database database = new Database();
+    protected Stage stage;
+    protected Scene scene;
     public void setScene(ActionEvent event, String pathName) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(pathName));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
             stage.setScene(scene);
             stage.show();

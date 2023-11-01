@@ -11,12 +11,12 @@ import java.awt.image.BufferedImage;
  * Lưu trữ thông tin các pixel của 1 sprite (hình ảnh game)
  */
 public class Sprite {
-    public static final int DEFAULT_SIZE = 16;
+    public static final int DEFAULT_SIZE = 40;
     /*
     public static final int KEEPER_SIZE = 50;
     public static final int SOCCER_SIZE = 16;
     */
-    private static final int TRANSPARENT_COLOR = 0xffff00ff;
+    private static final int TRANSPARENT_COLOR = 0xffffff;
     public final int SIZE;
     private int x, y;
     public int[] pixels;
@@ -62,40 +62,52 @@ public class Sprite {
     public static Sprite keeper_miss_right_1 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 16, 16);
     public static Sprite keeper_miss_right_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
 
-    public static Sprite movingSprite(Sprite normal, Sprite x1, Sprite x2, int animate, int time) {
-        if (animate % time < time / 3) return normal;
-        if (animate % time < time * 2 / 3) return x1;
-        return x2;
+    public static Sprite grass = new Sprite(DEFAULT_SIZE, 0, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite rock = new Sprite(DEFAULT_SIZE, 3, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite foot_print = new Sprite(DEFAULT_SIZE, 1, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite question_mark = new Sprite(DEFAULT_SIZE, 2, 0, SpriteSheet.tiles, 40, 40);
+
+    public static Sprite bear1 = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 40, 40);
+    public static Sprite bear2 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 40, 40);
+
+
+
+    public static Sprite movingSprite(Sprite x1, Sprite x2, int animate, int time) {
+//        if (animate % time < time / 3) return normal;
+//        if (animate % time < time * 2 / 3) return x1;
+//        return x2;
+        if (animate % time < time / 2) return x1;
+        else return x2;
     }
 
-//    public Image getFxImage() {
-//        WritableImage wr = new WritableImage(SIZE, SIZE);
-//        PixelWriter pw = wr.getPixelWriter();
-//        for (int x = 0; x < SIZE; x++) {
-//            for (int y = 0; y < SIZE; y++) {
-//                if (pixels[x + y * SIZE] == TRANSPARENT_COLOR) {
-//                    pw.setArgb(x, y, 0);
-//                } else {
-//                    pw.setArgb(x, y, pixels[x + y * SIZE]);
-//                }
-//            }
-//        }
-//        Image input = new ImageView(wr).getImage();
-//        return input;
-//    }
-
     public Image getFxImage() {
-        BufferedImage image = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_RGB);
+        WritableImage wr = new WritableImage(SIZE, SIZE);
+        PixelWriter pw = wr.getPixelWriter();
         for (int x = 0; x < SIZE; x++) {
             for (int y = 0; y < SIZE; y++) {
                 if (pixels[x + y * SIZE] == TRANSPARENT_COLOR) {
-                    image.setRGB(x, y, 0);
+                    pw.setArgb(x, y, 0);
                 } else {
-                    image.setRGB(x, y, pixels[x + y * SIZE]);
+                    pw.setArgb(x, y, pixels[x + y * SIZE]);
                 }
             }
         }
-        return null;
-
+        Image input = new ImageView(wr).getImage();
+        return input;
     }
+
+//    public Image getFxImage() {
+//        BufferedImage image = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_RGB);
+//        for (int x = 0; x < SIZE; x++) {
+//            for (int y = 0; y < SIZE; y++) {
+//                if (pixels[x + y * SIZE] == TRANSPARENT_COLOR) {
+//                    image.setRGB(x, y, 0);
+//                } else {
+//                    image.setRGB(x, y, pixels[x + y * SIZE]);
+//                }
+//            }
+//        }
+//        Image image =
+//
+//    }
 }

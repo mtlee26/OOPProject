@@ -4,7 +4,9 @@ import com.example.oopproject.dictionary.Word;
 import com.example.oopproject.game.entities.*;
 import com.example.oopproject.game.graphics.Sprite;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyEvent;
 
+import java.awt.event.ActionEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,16 +14,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Map {
-    public List<List<Entity>> map;
+    public static List<List<Entity>> map;
     protected int[][] itemList;
-    private final int HEIGHT = 8;
-    private final int WIDTH = 8;
+    public static final int HEIGHT = 8;
+    public static int WIDTH = 8;
+    private Bear bear;
 
     public Map() {
         map = new ArrayList<>();
+        bear = new Bear(0, 0, Sprite.bear1.getFxImage());
         itemList = new int[HEIGHT][WIDTH];
         try {
-            String fileName = "./src/main/resources/.txt";
+            String fileName = "./src/main/resources/map.txt";
             FileInputStream fileInputStream = new FileInputStream(fileName);
             Scanner sc = new Scanner(fileInputStream);
             while (sc.hasNextLine()) {
@@ -30,17 +34,19 @@ public class Map {
                     List<Entity> list = new ArrayList<>();
                     for (int j = 0; j < WIDTH; j++) {
                         switch(line.charAt(j)) {
-                            case '#':
+                            case '+':
                                 list.add(new Rock(j, i, Sprite.rock.getFxImage()));
                                 break;
                             case '?':
                                 list.add(new QuestionMark(j, i, Sprite.question_mark.getFxImage()));
                                 break;
-                            case '.':
+                            case '#':
                                 list.add(new FootPrint(j, i, Sprite.foot_print.getFxImage()));
                                 break;
-                            default:
+                            case '.':
                                 list.add(new Grass(j, i, Sprite.grass.getFxImage()));
+                                break;
+                            default:
                                 break;
                         }
                     }
@@ -57,6 +63,10 @@ public class Map {
         map.get(y).set(x, entity);
     }
 
+    public void update(KeyEvent event) {
+        bear.update(event);
+    }
+
     public void render(GraphicsContext gc) {
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
@@ -64,6 +74,7 @@ public class Map {
                 entity.render(gc);
             }
         }
+        bear.render(gc);
     }
 
 
