@@ -7,12 +7,12 @@ import javafx.fxml.FXML;
 public class GameController extends Controller {
     @FXML
     public void onSoccer(ActionEvent actionEvent) {
-        setScene(actionEvent, "/Views/SoccerView.fxml");
+//        setScene(actionEvent, "/Views/SoccerView.fxml");
     }
 
     @FXML
     public void onClickHoneyBear(ActionEvent actionEvent) {
-        setScene(actionEvent, "/Views/HoneyBear.fxml");
+//        setScene(actionEvent, "/Views/HoneyBear.fxml");
     }
 
 //    public abstract void playAgain();

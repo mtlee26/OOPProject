@@ -34,6 +34,7 @@ public class AddWordController extends Controller {
 
     @FXML
     public void onExitAddWordButtonClick(ActionEvent actionEvent) {
-        setScene(actionEvent, "/Views/DictionaryView.fxml");
+        // TODO
+//        setScene(actionEvent, "/Views/DictionaryView.fxml");
     }
 }

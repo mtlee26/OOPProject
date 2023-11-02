@@ -59,6 +59,10 @@ public class Map {
         }
     }
 
+    public Bear getBear() {
+        return bear;
+    }
+
     public void updateMap(int x, int y, Entity entity) {
         map.get(y).set(x, entity);
     }

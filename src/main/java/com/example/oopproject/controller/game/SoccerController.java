@@ -121,7 +121,7 @@ public class SoccerController extends GameController implements Initializable {
             setQuestion(questionList.get(count));
         } else {
             //result
-            setScene(actionEvent, "/Views/SoccerResultView.fxml");
+//            setScene(actionEvent, "/Views/SoccerResultView.fxml");
         }
     }
 

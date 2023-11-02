@@ -17,9 +17,15 @@ public class HoneyBear {
         map.update(event);
     }
 
-
-
     public void render(GraphicsContext gc) {
         map.render(gc);
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 }

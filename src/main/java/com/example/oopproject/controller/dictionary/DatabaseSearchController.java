@@ -121,7 +121,8 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @FXML
     public void onAddButtonClick(ActionEvent actionEvent) {
-        setScene(actionEvent, "/Views/AddWordView.fxml");
+        // TODO
+//        setScene(actionEvent, "/Views/AddWordView.fxml");
     }
 
     @FXML
