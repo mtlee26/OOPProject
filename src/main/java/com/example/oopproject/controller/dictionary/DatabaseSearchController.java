@@ -8,9 +8,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,6 +24,7 @@ import static com.example.oopproject.dictionary.TextToSpeech.playSoundGoogleTran
 public class DatabaseSearchController extends Controller implements Initializable {
 //    private Database database = new Database();
     private String wordInput;
+    private String wordFromWordList;
     ObservableList<String> listResults = FXCollections.observableArrayList();
 
     @FXML
@@ -39,6 +45,7 @@ public class DatabaseSearchController extends Controller implements Initializabl
     private TextArea sourceArea;
     @FXML
     private TextArea meaningArea;
+//    protected Database database = new Database();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -72,9 +79,10 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @FXML
     public void onMouseClickedSuggestList() {
-        String word = suggestList.getSelectionModel().getSelectedItem();
-        if (word != null) {
-            String wordExplain = database.databaseLookup(word);
+        wordFromWordList = suggestList.getSelectionModel().getSelectedItem();
+        wordInput = wordFromWordList;
+        if (wordFromWordList != null) {
+            String wordExplain = database.databaseLookup(wordFromWordList);
             meaningBox.setText(wordExplain);
         }
     }
@@ -107,27 +115,46 @@ public class DatabaseSearchController extends Controller implements Initializabl
     @FXML
     public void onDeleteButtonClick() {
         if (wordInput != null) {
+            System.out.println(wordInput);
+            if (searchField.getText().trim().toLowerCase().equals(wordInput)) {
+                System.out.println(searchField.getText());
+                searchField.clear();
+            }
             database.deleteWord(wordInput);
-            refresh();
-            //thong bao delete successfully
+            listResults.remove(wordInput);
+            meaningBox.clear();
         }
 
+//        if(wordFromWordList != null) {
+//            System.out.println(wordFromWordList);
+//            if (searchField.getText().trim().toLowerCase().equals(wordFromWordList)) {
+//                System.out.println(searchField.getText());
+//                searchField.clear();
+//            }
+//            database.deleteWord(wordFromWordList);
+//            listResults.remove(wordFromWordList);
+//            meaningBox.clear();
+//        }
     }
 
-    public void refresh() {
-        searchField.clear();
-        meaningBox.clear();
-    }
 
     @FXML
     public void onAddButtonClick(ActionEvent actionEvent) {
         // TODO
-//        setScene(actionEvent, "/Views/AddWordView.fxml");
+        try {
+            AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/AddWordView.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void onSoundButton() {
-        wordInput = searchField.getText().trim().toLowerCase();
+        //wordInput = searchField.getText().trim().toLowerCase();
         playSoundGoogleTranslateEnToVi(wordInput);
     }
 

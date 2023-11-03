@@ -11,7 +11,7 @@ public class Database {
     private Connection connection;
     private PreparedStatement ps;
 
-    Dictionary dictionary = new Dictionary();
+    private Dictionary dictionary = new Dictionary();
     public Database() {
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -25,6 +25,14 @@ public class Database {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public Dictionary getDictionary() {
+        return dictionary;
+    }
+
+    public void setDictionary(Dictionary dictionary) {
+        this.dictionary = dictionary;
     }
 
     public ObservableList<String> dictionarySearcher(String wordInput) {
@@ -99,18 +107,18 @@ public class Database {
         }
     }
 
-    public void close() {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-            if (ps != null) {
-                ps.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void close() {
+//        try {
+//            if (connection != null) {
+//                connection.close();
+//            }
+//            if (ps != null) {
+//                ps.close();
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 //    public static void main(String[] args) {
 //        Database db = new Database();

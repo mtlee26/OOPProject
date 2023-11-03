@@ -11,8 +11,8 @@ public class AddWordController extends Controller {
     private TextArea newWordTargetField;
     @FXML
     private TextArea newWordExplainField;
-    @FXML
-    private Button saveAddWordButton;
+//    @FXML
+//    private Button saveAddWordButton;
 
     @FXML
     public void onSaveAddWordButtonClick() {

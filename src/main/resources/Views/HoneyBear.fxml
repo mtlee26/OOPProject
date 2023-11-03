@@ -2,12 +2,19 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.HoneyBearController">
    <children>
       <AnchorPane fx:id="rootGame" layoutX="255.0" layoutY="55.0" prefHeight="321.0" prefWidth="321.0" />
-      <TextArea fx:id="question" editable="false" layoutX="14.0" layoutY="99.0" prefHeight="117.0" prefWidth="220.0" promptText="Question" />
-      <TextField fx:id="answerField" layoutX="15.0" layoutY="246.0" prefHeight="42.0" prefWidth="220.0" promptText="Answer" />
+      <TextArea fx:id="question" editable="false" layoutX="14.0" layoutY="99.0" prefHeight="117.0" prefWidth="220.0" promptText="Question" wrapText="true">
+         <font>
+            <Font name="Droid Sans Bold" size="16.0" />
+         </font></TextArea>
+      <TextField fx:id="answerField" layoutX="15.0" layoutY="246.0" prefHeight="42.0" prefWidth="220.0" promptText="Answer">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font></TextField>
       <Button fx:id="submit" layoutX="87.0" layoutY="320.0" mnemonicParsing="false" onAction="#onSubmit" text="Submit" />
    </children>
 </AnchorPane>

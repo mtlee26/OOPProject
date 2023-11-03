@@ -16,6 +16,7 @@ public class Bear extends AnimationEntity {
     private int yUnit;
     private int preX;
     private int preY;
+    private boolean isQuestion;
 
 
     public Bear(int xUnit, int yUnit, Image image) {
@@ -24,6 +25,7 @@ public class Bear extends AnimationEntity {
         this.yUnit = yUnit;
         preX = 0;
         preY = 0;
+        isQuestion = false;
     }
 
     public int getxUnit() {
@@ -32,6 +34,14 @@ public class Bear extends AnimationEntity {
 
     public int getyUnit() {
         return yUnit;
+    }
+
+    public boolean isQuestion() {
+        return isQuestion;
+    }
+
+    public void setQuestion(boolean question) {
+        isQuestion = question;
     }
 
     @Override
@@ -83,7 +93,7 @@ public class Bear extends AnimationEntity {
             if (entityUp instanceof Rock) {
                 return false;
             } else if (entityUp instanceof QuestionMark) {
-                HoneyBearController.isQuestion = true;
+                isQuestion = true;
                 return true;
             }
             return true;
@@ -96,7 +106,7 @@ public class Bear extends AnimationEntity {
             if (entityDown instanceof Rock) {
                 return false;
             } else if (entityDown instanceof QuestionMark) {
-                HoneyBearController.isQuestion = true;
+                isQuestion = true;
                 return true;
             }
             return true;
@@ -109,7 +119,7 @@ public class Bear extends AnimationEntity {
             if (entityLeft instanceof Rock) {
                 return false;
             } else if (entityLeft instanceof QuestionMark) {
-                HoneyBearController.isQuestion = true;
+                isQuestion = true;
                 return true;
             }
             return true;
@@ -122,7 +132,7 @@ public class Bear extends AnimationEntity {
             if (entityRight instanceof Rock) {
                 return false;
             } else if (entityRight instanceof QuestionMark) {
-                HoneyBearController.isQuestion = true;
+                isQuestion = true;
                 return true;
             }
         }
