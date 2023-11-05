@@ -5,21 +5,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.SoccerController">
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.SoccerController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="473.0" fitWidth="613.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/background.png" />
+            <Image url="@../image/soccerbackground%20.png" />
          </image>
       </ImageView>
-      <Label fx:id="questionField" layoutX="103.0" layoutY="33.0" prefHeight="107.0" prefWidth="371.0" style="-fx-background-color: #f8f8f8;" wrapText="true">
+      <Label fx:id="questionField" layoutX="72.0" layoutY="24.0" prefHeight="63.0" prefWidth="494.0" style="-fx-background-color: #f8f8f8;" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font></Label>
       <Label fx:id="scoreField" layoutX="491.0" layoutY="69.0" prefHeight="35.0" prefWidth="75.0" />
-      <Button fx:id="option1" layoutX="96.0" layoutY="303.0" mnemonicParsing="false" onAction="#onOption1" prefHeight="29.0" prefWidth="139.0" />
-      <Button fx:id="option2" layoutX="362.0" layoutY="303.0" mnemonicParsing="false" onAction="#onOption2" prefHeight="29.0" prefWidth="139.0" />
-      <Button fx:id="option3" layoutX="96.0" layoutY="352.0" mnemonicParsing="false" onAction="#onOption3" prefHeight="29.0" prefWidth="139.0" />
-      <Button fx:id="option4" layoutX="362.0" layoutY="352.0" mnemonicParsing="false" onAction="#onOption4" prefHeight="29.0" prefWidth="139.0" />
+      <Button fx:id="option1" layoutX="57.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption1" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="option2" layoutX="416.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption2" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="option3" layoutX="57.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption3" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="option4" layoutX="416.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption4" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

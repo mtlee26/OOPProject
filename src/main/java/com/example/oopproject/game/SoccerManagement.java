@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.example.oopproject.game.Question.NUM_OF_ANS;
+import static com.example.oopproject.game.MultipleChoiceQuestion.NUM_OF_ANS;
 
-public class GameManagement {
-    private List<Question> questionList = new ArrayList<>();
+public class SoccerManagement {
+    private List<MultipleChoiceQuestion> questionList = new ArrayList<>();
     public static final int NUM_OF_QUESTIONS = 10;
 
-    public List<Question> getQuestionList() {
+    public List<MultipleChoiceQuestion> getQuestionList() {
         return questionList;
     }
 
@@ -30,7 +30,7 @@ public class GameManagement {
                     ans.add(quiz[i+1]);
                 }
                 String key = quiz[5];
-                Question question = new Question(ques, ans, key);
+                MultipleChoiceQuestion question = new MultipleChoiceQuestion(ques, ans, key);
                 questionList.add(question);
             }
             sc.close();

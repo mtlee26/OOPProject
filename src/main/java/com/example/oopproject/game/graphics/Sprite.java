@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
  * Lưu trữ thông tin các pixel của 1 sprite (hình ảnh game)
  */
 public class Sprite {
-    public static final int DEFAULT_SIZE = 40;
+    public static final int DEFAULT_SIZE = 35;
     /*
     public static final int KEEPER_SIZE = 50;
     public static final int SOCCER_SIZE = 16;
@@ -63,9 +63,11 @@ public class Sprite {
     public static Sprite keeper_miss_right_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
 
     public static Sprite grass = new Sprite(DEFAULT_SIZE, 0, 0, SpriteSheet.tiles, 40, 40);
-    public static Sprite rock = new Sprite(DEFAULT_SIZE, 3, 0, SpriteSheet.tiles, 40, 40);
-    public static Sprite foot_print = new Sprite(DEFAULT_SIZE, 1, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite rock = new Sprite(DEFAULT_SIZE, 1, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite foot_print = new Sprite(DEFAULT_SIZE, 3, 0, SpriteSheet.tiles, 40, 40);
     public static Sprite question_mark = new Sprite(DEFAULT_SIZE, 2, 0, SpriteSheet.tiles, 40, 40);
+    public static Sprite honey = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 40, 40);
+
 
     public static Sprite bear1 = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 40, 40);
     public static Sprite bear2 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 40, 40);

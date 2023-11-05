@@ -1,5 +1,6 @@
 package com.example.oopproject.controller;
 
+import com.example.oopproject.database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,11 +12,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuController extends Controller implements Initializable {
+public class MenuController implements Initializable {
 
     @FXML
     public AnchorPane content;
     public static AnchorPane dictRoot, gameRoot, menuGame;
+    public static Database database = new Database();
 
     @FXML
     public void onDictionaryButtonClick() {
@@ -41,6 +43,12 @@ public class MenuController extends Controller implements Initializable {
         }
     }
 
+    @FXML
+    public void onHomeClick() {
+        dictRoot.setVisible(false);
+        gameRoot.setVisible(false);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -56,6 +64,7 @@ public class MenuController extends Controller implements Initializable {
             gameRoot.setVisible(false);
 //            soccerRoot.setVisible(false);
 //            bearRoot.setVisible(false);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

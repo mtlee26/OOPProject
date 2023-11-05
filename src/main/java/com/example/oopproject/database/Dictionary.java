@@ -24,6 +24,19 @@ public class Dictionary {
     }
 
     public static String htmlToText(String html) {
-        return Jsoup.parse(html).wholeText();
+        String source = Jsoup.parse(html).wholeText();
+//        String[] s = source.split("\n", -1);
+//        String explain = "";
+//        for (int i = 0; i < s.length; i++) {
+//            if (s[i].startsWith("@")) {
+//                explain = explain + s[i] + "\n";
+//            } else if (s[i].startsWith("*")) {
+//                explain = explain + "  " + s[i] + "\n";
+//            } else if (s[i].startsWith("-")) {
+//                explain = explain + "     " + s[i] + "\n";
+//            }
+//        }
+        //System.out.println(meaning);
+        return source;
     }
 }

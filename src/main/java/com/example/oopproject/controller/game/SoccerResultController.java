@@ -1,17 +1,31 @@
 package com.example.oopproject.controller.game;
 
-import com.example.oopproject.controller.Controller;
+import com.example.oopproject.controller.MenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
-public class SoccerResultController extends Controller {
+import java.io.IOException;
+
+import static com.example.oopproject.controller.MenuController.gameRoot;
+
+public class SoccerResultController extends GameController {
     @FXML
-    public void onPlayAgain(ActionEvent actionEvent) {
-//        setScene(actionEvent, "/Views/SoccerView.fxml");
+    public void onPlayAgain() {
+        setComponent(gameRoot, "/Views/SoccerView.fxml");
     }
 
     @FXML
-    public void onExit(ActionEvent actionEvent) {
-//        setScene(actionEvent, "/Views/Game.fxml");
+    public void onExit() {
+//        try {
+//            AnchorPane soccerRoot = FXMLLoader.load(getClass().getResource("/Views/DictionaryView.fxml"));
+//            gameRoot.getChildren().clear();
+//            gameRoot.getChildren().add(soccerRoot);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+        setComponent(gameRoot, "/Views/Game.fxml");
     }
 }

@@ -14,5 +14,6 @@ module com.example.oopproject {
     opens com.example.oopproject.controller.game to javafx.fxml;
     exports com.example.oopproject.controller.dictionary;
     opens com.example.oopproject.controller.dictionary to javafx.fxml;
+    exports com.example.oopproject.database;
 }
 

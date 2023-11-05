@@ -19,10 +19,12 @@ public class Map {
     public static final int HEIGHT = 8;
     public static int WIDTH = 8;
     private Bear bear;
+    private Honey honey;
 
     public Map() {
         map = new ArrayList<>();
         bear = new Bear(0, 0, Sprite.bear1.getFxImage());
+        honey = new Honey(7, 7, Sprite.honey.getFxImage());
         itemList = new int[HEIGHT][WIDTH];
         try {
             String fileName = "./src/main/resources/map.txt";
@@ -79,9 +81,8 @@ public class Map {
             }
         }
         bear.render(gc);
+        honey.render(gc);
     }
-
-
 }
 
 

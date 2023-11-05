@@ -1,20 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.HoneyBearController">
+<AnchorPane fx:id="root" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.HoneyBearController">
    <children>
-      <AnchorPane fx:id="rootGame" layoutX="255.0" layoutY="55.0" prefHeight="321.0" prefWidth="321.0" />
-      <TextArea fx:id="question" editable="false" layoutX="14.0" layoutY="99.0" prefHeight="117.0" prefWidth="220.0" promptText="Question" wrapText="true">
+      <ImageView fitHeight="458.0" fitWidth="609.0" layoutX="-4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bear.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="rootGame" layoutX="280.0" layoutY="70.0" prefHeight="280.0" prefWidth="280.0" />
+      <Button layoutX="75.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="29.0" prefWidth="71.0" styleClass="submit-button">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="54.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/submit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea fx:id="question" editable="false" layoutX="16.0" layoutY="148.0" prefHeight="65.0" prefWidth="119.0" promptText="Question" style="-fx-background-color: transparent;" wrapText="true">
          <font>
-            <Font name="Droid Sans Bold" size="16.0" />
-         </font></TextArea>
-      <TextField fx:id="answerField" layoutX="15.0" layoutY="246.0" prefHeight="42.0" prefWidth="220.0" promptText="Answer">
+            <Font name="Droid Sans Mono Dotted" size="14.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="answerField" alignment="CENTER" layoutX="45.0" layoutY="295.0" prefHeight="38.0" prefWidth="131.0" style="-fx-text-fill: black; -fx-background-color: white;">
          <font>
-            <Font name="Droid Sans" size="14.0" />
-         </font></TextField>
-      <Button fx:id="submit" layoutX="87.0" layoutY="320.0" mnemonicParsing="false" onAction="#onSubmit" text="Submit" />
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="timerLabel" layoutX="54.0" layoutY="49.0" prefHeight="50.0" prefWidth="110.0" textAlignment="CENTER">
+         <font>
+            <Font name="Droid Sans Mono Dotted" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="win" fitHeight="456.0" fitWidth="609.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../image/bearwin.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lose" fitHeight="461.0" fitWidth="609.0" layoutX="-5.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../image/bearlose.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exit" layoutX="448.0" layoutY="295.0" mnemonicParsing="false" onAction="#onExit" prefHeight="36.0" prefWidth="110.0" styleClass="endgame-bear-button" text="Exit" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="playAgain" layoutX="245.0" layoutY="298.0" mnemonicParsing="false" onAction="#onPlayAgain" prefHeight="25.0" prefWidth="110.0" styleClass="endgame-bear-button" text="Play Again" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

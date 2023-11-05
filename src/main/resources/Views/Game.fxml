@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.GameController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.GameController">
    <children>
-      <Button fx:id="soccer" layoutX="261.0" layoutY="122.0" mnemonicParsing="false" onAction="#onSoccer" text="Soccer" />
-      <Button fx:id="honeyBear" layoutX="261.0" layoutY="226.0" mnemonicParsing="false" onAction="#onClickHoneyBear" text="Honey Bear" />
+      <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/game2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="soccer" layoutX="226.0" layoutY="175.0" mnemonicParsing="false" onAction="#onSoccer" prefHeight="74.0" prefWidth="236.0" styleClass="game-menu-button" text="SOCCER" textFill="#204872">
+         <font>
+            <Font name="Berlin Sans FB" size="46.0" />
+         </font></Button>
+      <Button fx:id="honeyBear" layoutX="158.0" layoutY="294.0" mnemonicParsing="false" onAction="#onClickHoneyBear" prefHeight="93.0" prefWidth="411.0" styleClass="game-menu-button" text="HONEY BEAR" textFill="#204872">
+         <font>
+            <Font name="Berlin Sans FB" size="44.0" />
+         </font></Button>
+
    </children>
 </AnchorPane>

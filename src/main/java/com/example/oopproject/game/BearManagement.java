@@ -1,21 +1,13 @@
 package com.example.oopproject.game;
 
-import com.example.oopproject.game.entities.Bear;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
-
-import static com.example.oopproject.game.Question.NUM_OF_ANS;
 
 public class BearManagement {
-    private List<BearQuestion> questionList = new ArrayList<>();
+    private List<Question> questionList = new ArrayList<>();
     //public static final int NUM_OF_QUESTIONS = 10;
 
-    public List<BearQuestion> getQuestionList() {
+    public List<Question> getQuestionList() {
         return questionList;
     }
 
@@ -40,11 +32,13 @@ public class BearManagement {
 
     public void init(List<String> wordList) {
         for (String x : wordList) {
-            int random = (int) (Math.random() * x.length());
-            String key = String.valueOf(x.charAt(random)).toUpperCase();
-            String ques = x.replace(x.charAt(random), '_');
-            BearQuestion question = new BearQuestion(ques.toUpperCase(), key);
-            questionList.add(question);
+            if (!(x.trim().equals(""))) {
+                int random = (int) (Math.random() * x.length());
+                String key = String.valueOf(x.charAt(random)).toUpperCase();
+                String ques = x.replace(x.charAt(random), '_');
+                Question question = new Question(ques.toUpperCase(), key);
+                questionList.add(question);
+            }
         }
     }
 }

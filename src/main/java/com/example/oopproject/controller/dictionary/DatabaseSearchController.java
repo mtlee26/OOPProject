@@ -1,30 +1,32 @@
 package com.example.oopproject.controller.dictionary;
 
-import com.example.oopproject.controller.Controller;
-import com.example.oopproject.database.Database;
+import com.example.oopproject.controller.MenuController;
 import com.example.oopproject.dictionary.TranslatorApi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
+import static com.example.oopproject.DictionaryApplication.stage;
 import static com.example.oopproject.dictionary.TextToSpeech.playSoundGoogleTranslateEnToVi;
 
-public class DatabaseSearchController extends Controller implements Initializable {
-//    private Database database = new Database();
+public class DatabaseSearchController extends MenuController implements Initializable {
     private String wordInput;
     private String wordFromWordList;
+    private String explain;
     ObservableList<String> listResults = FXCollections.observableArrayList();
 
     @FXML
@@ -32,7 +34,7 @@ public class DatabaseSearchController extends Controller implements Initializabl
     @FXML
     private ListView<String> suggestList;
     @FXML
-    private TextArea meaningBox;
+    private ScrollPane meaningBox;
     @FXML
     private Button searchButton;
     @FXML
@@ -45,6 +47,8 @@ public class DatabaseSearchController extends Controller implements Initializabl
     private TextArea sourceArea;
     @FXML
     private TextArea meaningArea;
+    @FXML
+    private TextArea editMeaning;
 //    protected Database database = new Database();
 
     @Override
@@ -70,10 +74,9 @@ public class DatabaseSearchController extends Controller implements Initializabl
         String wordExplain = database.databaseLookup(wordInput);
         if (wordExplain == null) {
             alertNotFound.setVisible(true);
-            meaningBox.clear();
+            meaningBox.setContent(null);
         } else {
-            meaningBox.setText(wordExplain);
-            alertNotFound.setVisible(false);
+            show(wordExplain);
         }
     }
 
@@ -83,69 +86,80 @@ public class DatabaseSearchController extends Controller implements Initializabl
         wordInput = wordFromWordList;
         if (wordFromWordList != null) {
             String wordExplain = database.databaseLookup(wordFromWordList);
-            meaningBox.setText(wordExplain);
+            show(wordExplain);
         }
     }
 
     @FXML
     public void onChangeButtonClick() {
-        meaningBox.setEditable(true);
+        meaningBox.setVisible(false);
+        editMeaning.setVisible(true);
+        editMeaning.setText(explain);
         saveChangeButton.setVisible(true);
         cancelChangeButton.setVisible(true);
+        searchField.setDisable(true);
     }
 
     @FXML
-    public void onSaveChangeButtonClick() {
-        String newMeaning = meaningBox.getText();
-        database.changeWord(wordInput, newMeaning);
-        //thong bao change success
-        meaningBox.setEditable(false);
-        saveChangeButton.setVisible(false);
-        cancelChangeButton.setVisible(false);
+    public void onSaveChange() {
+        Alert saveAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        saveAlert.setHeaderText(null);
+        saveAlert.setContentText("Do you want to save change to this word meaning?");
+        Optional<ButtonType> option = saveAlert.showAndWait();
+        if (option.get() == ButtonType.OK) {
+            explain = editMeaning.getText();
+            database.changeWord(wordInput, explain);
+            editMeaning.setVisible(false);
+            saveChangeButton.setVisible(false);
+            cancelChangeButton.setVisible(false);
+            meaningBox.setVisible(true);
+            searchField.setDisable(false);
+            show(explain);
+        }
     }
 
     @FXML
-    public void onCancelButtonClick() {
-        //thong bao (do you want to exit change)
-        meaningBox.setEditable(false);
+    public void onCancelChange() {
+        editMeaning.setVisible(false);
         saveChangeButton.setVisible(false);
         cancelChangeButton.setVisible(false);
+        meaningBox.setVisible(true);
+        searchField.setDisable(false);
+        //show(explain);
     }
 
     @FXML
     public void onDeleteButtonClick() {
         if (wordInput != null) {
-            System.out.println(wordInput);
-            if (searchField.getText().trim().toLowerCase().equals(wordInput)) {
-                System.out.println(searchField.getText());
-                searchField.clear();
+            Alert deleteAlert = new Alert(Alert.AlertType.CONFIRMATION);
+            deleteAlert.setHeaderText(null);
+            deleteAlert.setContentText("Do you want to delete this word?");
+            Optional<ButtonType> option = deleteAlert.showAndWait();
+            if (option.get() == ButtonType.OK) {
+                if (searchField.getText().trim().toLowerCase().equals(wordInput)) {
+                    searchField.clear();
+                }
+                database.deleteWord(wordInput);
+                listResults.remove(wordInput);
+                meaningBox.setContent(null);
+                wordInput = null;
             }
-            database.deleteWord(wordInput);
-            listResults.remove(wordInput);
-            meaningBox.clear();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("No word found");
+            alert.showAndWait();
         }
-
-//        if(wordFromWordList != null) {
-//            System.out.println(wordFromWordList);
-//            if (searchField.getText().trim().toLowerCase().equals(wordFromWordList)) {
-//                System.out.println(searchField.getText());
-//                searchField.clear();
-//            }
-//            database.deleteWord(wordFromWordList);
-//            listResults.remove(wordFromWordList);
-//            meaningBox.clear();
-//        }
     }
 
-
     @FXML
-    public void onAddButtonClick(ActionEvent actionEvent) {
+    public void onAddButtonClick() {
         // TODO
         try {
             AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/AddWordView.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
+            Scene addScene = new Scene(root);
+            addScene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
+            stage.setScene(addScene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -154,8 +168,13 @@ public class DatabaseSearchController extends Controller implements Initializabl
 
     @FXML
     public void onSoundButton() {
-        //wordInput = searchField.getText().trim().toLowerCase();
+        System.out.println(wordInput);
         playSoundGoogleTranslateEnToVi(wordInput);
+    }
+
+    @FXML
+    public void onExitButtonClick() {
+        stage.close();
     }
 
     @FXML
@@ -163,5 +182,44 @@ public class DatabaseSearchController extends Controller implements Initializabl
         String source = sourceArea.getText();
         String translate = TranslatorApi.translateEnToVi(source);
         meaningArea.setText(translate);
+    }
+
+    public void show(String wordExplain) {
+        VBox vbox = new VBox(5);
+        String[] s = wordExplain.split("\n", -1);
+        explain = "";
+        Font font1 = Font.font("Arial", FontWeight.MEDIUM, 16);
+        Font font2 = Font.font("Arial", FontWeight.BOLD,16);
+        Font font3 = Font.font("Arial", 14);
+        for (int i = 0; i < s.length; i++) {
+            s[i] = s[i].trim();
+            if (s[i].startsWith("@")) {
+                explain = explain + s[i] + "\n";
+                String tmp = s[i];
+                Text text = new Text(tmp);
+                text.setFont(font1);
+                vbox.getChildren().add(text);
+            } else if (s[i].startsWith("*")) {
+                explain = explain + "  " + s[i] + "\n";
+                String tmp = "  " + s[i] ;
+                Text text = new Text(tmp);
+                text.setFont(font2);
+                vbox.getChildren().add(text);
+            } else if (s[i].startsWith("-")) {
+                explain = explain + "     " + s[i] + "\n";
+                String tmp = "     " + s[i];
+                Text text = new Text(tmp);
+                text.setFont(font3);
+                vbox.getChildren().add(text);
+            } else {
+                explain = explain + " " + s[i] + "\n";
+                String tmp = " " + s[i];
+                Text text = new Text(tmp);
+                text.setFont(font3);
+                vbox.getChildren().add(text);
+            }
+        }
+        meaningBox.setContent(vbox);
+        alertNotFound.setVisible(false);
     }
 }

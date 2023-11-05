@@ -1,0 +1,67 @@
+.option-button {
+    -fx-background-color: #76b9f0;
+}
+
+.option-button:hover {
+    -fx-background-color: #a1ddff;
+}
+
+.dictionary-button, .menu-button, .translate-button, .submit-button {
+    -fx-background-color: transparent;
+}
+
+.dictionary-button:hover, .translate-button:hover {
+    -fx-background-color: #76b9f0;
+}
+
+.submit-button:hover {
+    -fx-background-color: #dbeff4;
+}
+
+.menu-button:hover {
+ -fx-background-color: #dbeff4;
+ -fx-text-fill: #ffffff;
+}
+
+.list-cell:even{
+     -fx-background-color: #f5f6fa;
+}
+.list-cell:odd {
+    -fx-background-color: #dbeff4;
+}
+
+.list-cell:filled:hover,
+.list-cell:filled:selected{
+    -fx-background-color: #76b9f0;
+    -fx-text-fill: white;
+}
+
+.container {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.search-field {
+    -fx-background-color: #204872;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.pane {
+    -fx-background-color: #204872;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.game-menu-button, .endgame-bear-button {
+    -fx-background-color: transparent;
+}
+
+.game-menu-button:hover {
+    -fx-text-fill: #66a4e2
+}
+
+.endgame-bear-button: hover {
+    -fx-text-fill: #a1ddff
+}
+

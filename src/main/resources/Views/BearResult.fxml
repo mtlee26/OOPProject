@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.BearResultController">
+   <children>
+      <Button layoutX="148.0" layoutY="236.0" mnemonicParsing="false" onAction="#onPlayAgain" prefHeight="34.0" prefWidth="84.0" text="Play Again" textAlignment="CENTER" />
+      <Button layoutX="399.0" layoutY="236.0" mnemonicParsing="false" onAction="#onExit" prefHeight="34.0" prefWidth="77.0" text="Exit" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
