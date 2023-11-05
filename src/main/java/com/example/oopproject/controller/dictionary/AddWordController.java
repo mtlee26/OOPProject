@@ -4,10 +4,8 @@ import com.example.oopproject.controller.MenuController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
 
-import static com.example.oopproject.DictionaryApplication.scene;
-import static com.example.oopproject.DictionaryApplication.stage;
+import static com.example.oopproject.controller.MenuController.addRoot;
 
 public class AddWordController {
     @FXML
@@ -35,11 +33,8 @@ public class AddWordController {
     @FXML
     public void onCancelAddWordButtonClick() {
         //TODO alert
-        stage.setScene(scene);
-        stage.show();
-//        Stage stage = (Stage) saveAddWordButton.getScene().getWindow();
-//        stage.close();
-//        stage.setScene(scene);
-//        stage.show();
+        //stage.setScene(scene);
+        //stage.show();
+        addRoot.setVisible(false);
     }
 }

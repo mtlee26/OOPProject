@@ -5,17 +5,13 @@ import com.example.oopproject.dictionary.TranslatorApi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -23,7 +19,7 @@ import java.util.ResourceBundle;
 import static com.example.oopproject.DictionaryApplication.stage;
 import static com.example.oopproject.dictionary.TextToSpeech.playSoundGoogleTranslateEnToVi;
 
-public class DatabaseSearchController extends MenuController implements Initializable {
+public class DictionaryController extends MenuController implements Initializable {
     private String wordInput;
     private String wordFromWordList;
     private String explain;
@@ -155,15 +151,17 @@ public class DatabaseSearchController extends MenuController implements Initiali
     @FXML
     public void onAddButtonClick() {
         // TODO
-        try {
-            AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/AddWordView.fxml"));
-            Scene addScene = new Scene(root);
-            addScene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
-            stage.setScene(addScene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/AddWordView.fxml"));
+//            //dictRoot.getChildren().add(root);
+//            Scene addScene = new Scene(root);
+//            addScene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
+//            stage.setScene(addScene);
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        addRoot.setVisible(true);
     }
 
     @FXML
