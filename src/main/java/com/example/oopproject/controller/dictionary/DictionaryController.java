@@ -1,6 +1,7 @@
 package com.example.oopproject.controller.dictionary;
 
 import com.example.oopproject.controller.MenuController;
+import com.example.oopproject.dictionary.Dictionary;
 import com.example.oopproject.dictionary.TranslatorApi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -45,6 +46,8 @@ public class DictionaryController extends MenuController implements Initializabl
     private TextArea meaningArea;
     @FXML
     private TextArea editMeaning;
+    @FXML
+    private Button translateButton;
 //    protected Database database = new Database();
 
     @Override
@@ -57,6 +60,7 @@ public class DictionaryController extends MenuController implements Initializabl
             }
         });
         searchButton.disableProperty().bind(searchField.textProperty().isEmpty());
+        translateButton.disableProperty().bind(sourceArea.textProperty().isEmpty());
     }
 
     @FXML
@@ -67,7 +71,7 @@ public class DictionaryController extends MenuController implements Initializabl
     @FXML
     public void onSearchButtonClick() {
         wordInput = searchField.getText().trim().toLowerCase();
-        String wordExplain = database.databaseLookup(wordInput);
+        String wordExplain = database.lookup(wordInput);
         if (wordExplain == null) {
             alertNotFound.setVisible(true);
             meaningBox.setContent(null);
@@ -81,7 +85,7 @@ public class DictionaryController extends MenuController implements Initializabl
         wordFromWordList = suggestList.getSelectionModel().getSelectedItem();
         wordInput = wordFromWordList;
         if (wordFromWordList != null) {
-            String wordExplain = database.databaseLookup(wordFromWordList);
+            String wordExplain = database.lookup(wordFromWordList);
             show(wordExplain);
         }
     }

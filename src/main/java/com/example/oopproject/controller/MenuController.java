@@ -1,11 +1,9 @@
 package com.example.oopproject.controller;
 
-import com.example.oopproject.database.Database;
-import javafx.event.ActionEvent;
+import com.example.oopproject.dictionary.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -41,6 +39,7 @@ public class MenuController implements Initializable {
         gameRoot.setVisible(true);
         if (game != null) {
             game.setRunning(false);
+            //System.out.println("here");
         }
         //gameRoot.getChildren().clear();
 //        soccerRoot.setVisible(false);

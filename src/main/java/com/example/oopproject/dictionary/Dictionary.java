@@ -1,5 +1,7 @@
 package com.example.oopproject.dictionary;
 
+import org.jsoup.Jsoup;
+
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -21,10 +23,14 @@ public class Dictionary {
     }
 
     public String getMeaning(String wordTarget) {
-        return wordList.get(wordTarget);
+        return htmlToText(wordList.get(wordTarget));
     }
 
     public int size() {
         return wordList.size();
+    }
+    public static String htmlToText(String html) {
+        String source = Jsoup.parse(html).wholeText();
+        return source;
     }
 }

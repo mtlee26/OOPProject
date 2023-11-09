@@ -137,7 +137,7 @@
                         </ImageView>
                         <TextArea fx:id="sourceArea" layoutX="51.0" layoutY="137.0" prefHeight="176.0" prefWidth="234.0" style="-fx-background-color: transparent;" />
                         <TextArea fx:id="meaningArea" layoutX="321.0" layoutY="138.0" prefHeight="175.0" prefWidth="233.0" style="-fx-background-color: transparent;" />
-                        <Button layoutX="232.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickTranslate" prefHeight="51.0" prefWidth="132.0" styleClass="translate-button">
+                        <Button fx:id="translateButton" layoutX="232.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickTranslate" prefHeight="51.0" prefWidth="132.0" styleClass="translate-button">
                            <graphic>
                               <ImageView fitHeight="48.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

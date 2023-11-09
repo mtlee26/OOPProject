@@ -69,7 +69,7 @@ public class HoneyBearController extends GameController implements Initializable
         isEnd = false;
         cntWrong = 0;
         game = new HoneyBear();
-        quiz.init(MenuController.database.getDictionary().getWordList().stream().toList());
+        quiz.init(MenuController.database.getDictionary().getWordList().keySet().stream().toList());
         Collections.shuffle(questionList);
         Canvas canvas = new Canvas(320, 320);
         gc = canvas.getGraphicsContext2D();
