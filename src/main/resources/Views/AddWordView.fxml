@@ -38,7 +38,7 @@
       </Button>
       <ImageView fitHeight="24.0" fitWidth="100.0" layoutX="37.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/newword.png" />
+            <Image url="@../image/newword%20(2).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="35.0" fitWidth="79.0" layoutX="43.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
