@@ -220,4 +220,10 @@ public class DictionaryController extends MenuController implements Initializabl
         meaningBox.setContent(vbox);
         alertNotFound.setVisible(false);
     }
+
+    @FXML
+    public void onListen() {
+        String input = sourceArea.getText();
+        playSoundGoogleTranslateEnToVi(input);
+    }
 }

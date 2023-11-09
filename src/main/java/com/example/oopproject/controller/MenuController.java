@@ -39,6 +39,9 @@ public class MenuController implements Initializable {
     public void onGameButtonClick() {
         dictRoot.setVisible(false);
         gameRoot.setVisible(true);
+        if (game != null) {
+            game.setRunning(false);
+        }
         //gameRoot.getChildren().clear();
 //        soccerRoot.setVisible(false);
 //        bearRoot.setVisible(false);
@@ -46,9 +49,7 @@ public class MenuController implements Initializable {
             AnchorPane menuGame = FXMLLoader.load(getClass().getResource("/Views/Game.fxml"));
             gameRoot.getChildren().clear();
             //System.out.println(root);
-            if (game != null) {
-                game.setRunning(false);
-            }
+
             gameRoot.getChildren().add(menuGame);
         } catch (Exception e) {
             e.printStackTrace();

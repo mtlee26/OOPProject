@@ -36,6 +36,7 @@ public class Database {
     }
 
     public ObservableList<String> dictionarySearcher(String wordInput) {
+        wordInput = wordInput.trim().toLowerCase();
         ObservableList<String> suggestList = FXCollections.observableArrayList();
         for (String x : dictionary.getWordList()) {
             if(x.startsWith(wordInput)) {

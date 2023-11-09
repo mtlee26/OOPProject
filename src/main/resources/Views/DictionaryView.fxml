@@ -146,6 +146,15 @@
                               </ImageView>
                            </graphic>
                         </Button>
+                        <Button layoutX="64.0" layoutY="279.0" mnemonicParsing="false" onAction="#onListen" prefHeight="34.0" prefWidth="38.0" styleClass="dictionary-button">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/listengg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children></AnchorPane>
 
                     </content>

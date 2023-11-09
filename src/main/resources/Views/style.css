@@ -10,6 +10,11 @@
     -fx-background-color: transparent;
 }
 
+.translate-button {
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
 .dictionary-button:hover, .translate-button:hover {
     -fx-background-color: #76b9f0;
 }

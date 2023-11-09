@@ -1,17 +1,28 @@
 package com.example.oopproject.database;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import org.jsoup.*;
 
 public class Dictionary {
-    private Set<String> wordList = new TreeSet<>();
+//    private Set<String> wordList = new TreeSet<>();
+//
+//    public Set<String> getWordList() {
+//        return wordList;
+//    }
+//
+//    public void setWordList(Set<String> wordList) {
+//        this.wordList = wordList;
+//    }
+    private List<String> wordList = new ArrayList<>();
 
-    public Set<String> getWordList() {
+    public List<String> getWordList() {
         return wordList;
     }
 
-    public void setWordList(Set<String> wordList) {
+    public void setWordList(List<String> wordList) {
         this.wordList = wordList;
     }
 
