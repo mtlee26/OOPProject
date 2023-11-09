@@ -1,26 +1,22 @@
 package com.example.oopproject.controller.game;
 
 import com.example.oopproject.game.Direction;
-import com.example.oopproject.game.SoccerManagement;
-import com.example.oopproject.game.MultipleChoiceQuestion;
+import com.example.oopproject.game.soccer.Soccer;
+import com.example.oopproject.game.soccer.SoccerManagement;
+import com.example.oopproject.game.soccer.MultipleChoiceQuestion;
 import javafx.animation.AnimationTimer;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
 
 import static com.example.oopproject.controller.MenuController.gameRoot;
 
@@ -175,7 +171,7 @@ public class SoccerController extends GameController implements Initializable {
             setQuestion(questionList.get(count));
         } else {
             //result
-            setComponent(gameRoot, "/Views/SoccerResultView.fxml");
+            setComponent("/Views/SoccerResultView.fxml");
         }
     }
 

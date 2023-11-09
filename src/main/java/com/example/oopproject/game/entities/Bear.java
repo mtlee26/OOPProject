@@ -1,15 +1,12 @@
 package com.example.oopproject.game.entities;
 
-import com.example.oopproject.controller.game.HoneyBearController;
 import com.example.oopproject.game.Direction;
-import com.example.oopproject.game.Map;
+import com.example.oopproject.game.bear.Map;
 import com.example.oopproject.game.graphics.Sprite;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-
-import java.beans.EventHandler;
 
 public class Bear extends AnimationEntity {
     private int xUnit;

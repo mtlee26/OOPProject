@@ -14,7 +14,7 @@ import static com.example.oopproject.controller.MenuController.gameRoot;
 public class SoccerResultController extends GameController {
     @FXML
     public void onPlayAgain() {
-        setComponent(gameRoot, "/Views/SoccerView.fxml");
+        setComponent("/Views/SoccerView.fxml");
     }
 
     @FXML
@@ -26,6 +26,6 @@ public class SoccerResultController extends GameController {
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
-        setComponent(gameRoot, "/Views/Game.fxml");
+        setComponent("/Views/Game.fxml");
     }
 }
