@@ -10,11 +10,11 @@ import static com.example.oopproject.controller.MenuController.gameRoot;
 
 public class GameController {
     //protected static AnchorPane soccerRoot, bearRoot;
-    protected static AnchorPane componentRoot;
+    //protected static AnchorPane componentRoot;
 
     @FXML
     public void onSoccer() {
-        setComponent(gameRoot, "/Views/SoccerView.fxml");
+        setComponent("/Views/SoccerView.fxml");
 //        try {
 //            soccerRoot = FXMLLoader.load(getClass().getResource("/Views/SoccerView.fxml"));
 //            gameRoot.getChildren().clear();
@@ -26,15 +26,16 @@ public class GameController {
 
     @FXML
     public void onClickHoneyBear() {
-        setComponent(gameRoot, "/Views/HoneyBear.fxml");
+        setComponent("/Views/HoneyBear.fxml");
     }
 
-    public void setComponent(Pane root, String path) {
+    public void setComponent(String path) {
         try {
-            componentRoot = FXMLLoader.load(getClass().getResource(path));
+            AnchorPane componentRoot = FXMLLoader.load(getClass().getResource(path));
             System.out.println(componentRoot);
-            root.getChildren().clear();
-            root.getChildren().add(componentRoot);
+            gameRoot.getChildren().clear();
+            //System.out.println(gameRoot.getChildren());
+            gameRoot.getChildren().add(componentRoot);
         } catch (Exception e) {
             e.printStackTrace();
         }

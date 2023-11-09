@@ -12,11 +12,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.example.oopproject.controller.game.HoneyBearController.game;
+
+//import static com.example.oopproject.controller.game.HoneyBearController.root;
+
 public class MenuController implements Initializable {
 
     @FXML
     public AnchorPane content;
-    public static AnchorPane dictRoot, gameRoot, menuGame, addRoot;
+    public static AnchorPane dictRoot, gameRoot, addRoot;
     public static Database database = new Database();
 
     @FXML
@@ -24,6 +28,9 @@ public class MenuController implements Initializable {
         dictRoot.setVisible(true);
         //gameRoot.getChildren()
         gameRoot.setVisible(false);
+        if (game != null) {
+            game.setRunning(false);
+        }
 //        soccerRoot.setVisible(false);
 //        bearRoot.setVisible(false);
     }
@@ -32,11 +39,16 @@ public class MenuController implements Initializable {
     public void onGameButtonClick() {
         dictRoot.setVisible(false);
         gameRoot.setVisible(true);
+        //gameRoot.getChildren().clear();
 //        soccerRoot.setVisible(false);
 //        bearRoot.setVisible(false);
         try {
-            menuGame = FXMLLoader.load(getClass().getResource("/Views/Game.fxml"));
+            AnchorPane menuGame = FXMLLoader.load(getClass().getResource("/Views/Game.fxml"));
             gameRoot.getChildren().clear();
+            //System.out.println(root);
+            if (game != null) {
+                game.setRunning(false);
+            }
             gameRoot.getChildren().add(menuGame);
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,6 +59,9 @@ public class MenuController implements Initializable {
     public void onHomeClick() {
         dictRoot.setVisible(false);
         gameRoot.setVisible(false);
+        if (game != null) {
+            game.setRunning(false);
+        }
     }
 
     @Override
@@ -65,9 +80,6 @@ public class MenuController implements Initializable {
 //            content.getChildren().add(bearRoot);
             dictRoot.setVisible(false);
             gameRoot.setVisible(false);
-//            soccerRoot.setVisible(false);
-//            bearRoot.setVisible(false);
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
