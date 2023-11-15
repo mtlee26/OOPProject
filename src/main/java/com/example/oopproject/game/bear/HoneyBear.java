@@ -16,7 +16,7 @@ public class HoneyBear {
     public HoneyBear() {
         isRunning = true;
         map = new Map();
-        sound = new Media(new File("./src/main/resources/sound/music2.wav").toURI().toString());
+        sound = new Media(new File("./src/main/resources/sound/music.wav").toURI().toString());
         soundPlayer = new MediaPlayer(sound);
         soundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         System.out.println("new");
