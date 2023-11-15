@@ -6,19 +6,19 @@ import javafx.scene.image.Image;
 import com.example.oopproject.game.graphics.Sprite;
 
 public class Entity {
-    protected int x;
-    protected int y;
+    protected double x;
+    protected double y;
     protected Image img;
 
-//    public Entity(int x, int y, Image img) {
-//        this.x = x;
-//        this.y = y;
-//        this.img = img;
-//    }
+    public Entity(double x, double y, Image img) {
+        this.x = x;
+        this.y = y;
+        this.img = img;
+    }
 
-    public Entity( int xUnit, int yUnit, Image img) {
-        this.x = xUnit * Sprite.DEFAULT_SIZE;
-        this.y = yUnit * Sprite.DEFAULT_SIZE;
+    public Entity( int xUnit, int yUnit, Image img, int size) {
+        this.x = xUnit * size;
+        this.y = yUnit * size;
         this.img = img;
     }
 
@@ -26,19 +26,19 @@ public class Entity {
         gc.drawImage(img, x, y);
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 }

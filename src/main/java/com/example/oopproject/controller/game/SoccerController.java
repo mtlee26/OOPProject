@@ -1,6 +1,9 @@
 package com.example.oopproject.controller.game;
 
-import com.example.oopproject.game.Direction;
+//import com.example.oopproject.game.Direction;
+import com.example.oopproject.game.Time;
+import com.example.oopproject.game.bear.HoneyBear;
+import com.example.oopproject.game.entities.Bear;
 import com.example.oopproject.game.soccer.Soccer;
 import com.example.oopproject.game.soccer.SoccerManagement;
 import com.example.oopproject.game.soccer.MultipleChoiceQuestion;
@@ -11,24 +14,28 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
-import java.util.Collections;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import static com.example.oopproject.controller.MenuController.gameRoot;
+import static com.example.oopproject.game.entities.AnimationEntity.DIRECTION.LEFT;
+import static com.example.oopproject.game.entities.AnimationEntity.DIRECTION.RIGHT;
 
 public class SoccerController extends GameController implements Initializable {
     private SoccerManagement gm = new SoccerManagement();
     private List<MultipleChoiceQuestion> questionList = gm.getQuestionList();
-    private Soccer soccer = new Soccer();
+    public static Soccer soccer;
+    public static Time time;
     private int score = 0;
     private int count = 0;
 
     @FXML
-    private AnchorPane root; //xoa
+    private AnchorPane soccerRoot; //xoa
+    @FXML
+    private Label timerLabel;
     @FXML
     private Label questionField;
     @FXML
@@ -41,71 +48,65 @@ public class SoccerController extends GameController implements Initializable {
     private Button option3;
     @FXML
     private Button option4;
+    @FXML
+    private Button nextButton;
+    @FXML
+    private ImageView endGame;
+    @FXML
+    private Button playAgain;
+    @FXML
+    private Button exit;
+    @FXML
+    private AnchorPane endgame;
+    @FXML
+    private Label scoreLabel;
+    private AnimationTimer gameLoop;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        soccer = new Soccer();
         gm.insertFromFile();
         Collections.shuffle(questionList);
-        displayQuestion();
         Canvas canvas = new Canvas(600, 400);
         GraphicsContext gc = canvas.getGraphicsContext2D();
-//        scoreField.setText("Score: " + score);
-//        soccer.render(gc);
-        gameRoot.getChildren().add(canvas);
-        AnimationTimer gameLoop = new AnimationTimer() {
+        soccerRoot.getChildren().add(canvas);
+        time = new Time(timerLabel);
+        displayQuestion();
+        gameLoop = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                scoreField.setText("Score: " + score);
-                soccer.render(gc);
+                if (!time.isEnd()) {
+                    scoreField.setText("Score: " + score);
+                    //game.render(gc);
+                    //gameUpdate();
+                    //questionUpdate();
+                    soccer.update();
+                    soccer.render(gc);
+                }
             }
         };
         gameLoop.start();
+        time.run();
     }
-
-//    public void clickAnswer(Button button, ActionEvent actionEvent) {
-//        String ans = button.getText();
-//        //System.out.println(ans);
-//        if (questionList.get(count).isTrue(ans)) {
-//            score += 10;
-//            //button.setStyle("-fx-border-color: green");
-//            //am thanh
-//            if (button.equals(option1) || button.equals(option3)) {
-//                soccer.setDirection(Direction.DIRECTION.LEFT);
-//            } else {
-//                soccer.setDirection(Direction.DIRECTION.RIGHT);
-//            }
-//            soccer.setHit(true);
-//        } else {
-//            //
-//            soccer.setHit(false);
-//        }
-//        scoreField.setText("Score: " + score);
-//        //updateScore(ans, questionList.get(count));
-//        count++;
-//        displayQuestion();
-//    }
 
     public void clickAnswer(Button button) {
         String ans = button.getText();
         if (questionList.get(count).isTrue(ans)) {
             score += 10;
-            //button.setStyle("-fx-background-color: green");
-            System.out.println(button.getStyle());
             //am thanh
-            if (button.equals(option1) || button.equals(option3)) {
-                soccer.setDirection(Direction.DIRECTION.LEFT);
-            } else {
-                soccer.setDirection(Direction.DIRECTION.RIGHT);
-            }
             soccer.setHit(true);
         } else {
-            //button.setStyle("-fx-background-color: red");
-            //
+
             soccer.setHit(false);
         }
-        count++;
-
-        displayQuestion();
+        if (button.equals(option1) || button.equals(option3)) {
+            soccer.setDirection(LEFT);
+        } else {
+            soccer.setDirection(RIGHT);
+        }
+        nextButton.setVisible(true);
+//        count++;
+//        displayQuestion();
     }
 
     public void onOption1() {
@@ -135,17 +136,6 @@ public class SoccerController extends GameController implements Initializable {
         option4.setText(answer.get(3));
     }
 
-//    public void updateScore(String answer, MultipleChoiceQuestion question) {
-//        if (question.isTrue(answer)) {
-//            score += 10;
-//
-//            //am thanh
-//        } else {
-//
-//        }
-//        scoreField.setText(Integer.toString(score));
-//    }
-
 //    public void displayQuestion(ActionEvent actionEvent) {
 //        if (count < gm.NUM_OF_QUESTIONS) {
 //            setQuestion(questionList.get(count));
@@ -156,22 +146,91 @@ public class SoccerController extends GameController implements Initializable {
 //    }
 
     public void displayQuestion() {
-//        try {
-//            TimeUnit.SECONDS.sleep(2);
-//
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-        if (count < gm.NUM_OF_QUESTIONS) {
+        if (count < gm.NUM_OF_QUESTIONS && !(time.isEnd())) {
             setQuestion(questionList.get(count));
+            //System.out.println("here");
         } else {
             //result
-            setComponent("/Views/SoccerResultView.fxml");
+            System.out.println("end");
+            gameLoop.stop();
+            time.setEnd(true);
+            soccer.setRunning(false);
+//            endGame.setVisible(true);
+//            playAgain.setVisible(true);
+//            exit.setVisible(true);
+            endgame.setVisible(true);
+            scoreLabel.setText(String.valueOf(score));
+        }
+    }
+
+//    public void gameUpdate() {
+////        if (!bear.isQuestion()) {
+////            rootGame.requestFocus();
+////            rootGame.setOnKeyPressed(keyEvent -> {
+////                game.update(keyEvent);
+////            });
+////        }
+////        if (count == 10) {
+////            //isWin = true;
+////            //soundPlayer.stop();
+////            gameLoop.stop();
+////            game.setRunning(false);
+////            win.setVisible(true);
+////            playAgain.setVisible(true);
+////            exit.setVisible(true);
+////        }
+//        if (time.isEnd()) {
+//            gameLoop.stop();
+//            //isEnd = true;
+//            //game.setRunning(false);
+//            //lose.setVisible(true);
+//            //playAgain.setVisible(true);
+//            //exit.setVisible(true);
+//        }
+//    }
+
+    @FXML
+    public void onNext() {
+        count++;
+        displayQuestion();
+        nextButton.setVisible(false);
+        soccer.reset();
+    }
+
+    @FXML
+    public void onPlayAgain() {
+        //soundPlayer.play();
+        //game.setRunning(true);
+//        endGame.setVisible(false);
+//        playAgain.setVisible(false);
+//        exit.setVisible(false);
+        endgame.setVisible(false);
+        refresh();
+        //isEnd = false;
+    }
+
+    @FXML
+    public void onExit() {
+        setComponent("/Views/Game.fxml");
+    }
+
+    public void refresh() {
+        score = 0;
+        count = 0;
+        soccer = new Soccer();
+        time = new Time(timerLabel);
+        Collections.shuffle(questionList);
+        gameLoop.start();
+        time.run();
+        System.out.println("refresh");
+    }
+
+    public static void setEnd() {
+        if (soccer != null) {
+            soccer.setRunning(false);
+        }
+        if (time != null) {
+            time.setEnd(true);
         }
     }
 

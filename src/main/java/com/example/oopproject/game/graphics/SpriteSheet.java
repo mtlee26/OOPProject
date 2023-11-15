@@ -18,6 +18,7 @@ public class SpriteSheet {
     public BufferedImage image;
 
     public static SpriteSheet tiles = new SpriteSheet("/image/img.png", 140);
+    public static SpriteSheet soccer = new SpriteSheet("/image/keeper2.png", 600);
 
     public SpriteSheet(String path, int size) {
         this.path = path;

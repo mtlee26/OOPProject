@@ -19,6 +19,7 @@ public class HoneyBear {
         sound = new Media(new File("./src/main/resources/sound/music.wav").toURI().toString());
         soundPlayer = new MediaPlayer(sound);
         soundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+        System.out.println("new");
     }
 
     public void update(KeyEvent event) {
@@ -29,7 +30,10 @@ public class HoneyBear {
         if (isRunning) {
             map.render(gc);
             soundPlayer.play();
+        } else {
+            soundPlayer.stop();
         }
+        //System.out.println("render");
     }
 
     public boolean isRunning() {

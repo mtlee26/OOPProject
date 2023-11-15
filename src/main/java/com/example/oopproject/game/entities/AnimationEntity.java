@@ -1,37 +1,58 @@
 package com.example.oopproject.game.entities;
 
-import com.example.oopproject.game.Direction;
+//import com.example.oopproject.game.Direction;
 import com.example.oopproject.game.graphics.Sprite;
 import javafx.scene.image.Image;
 
 public class AnimationEntity extends Entity {
-    protected Direction.DIRECTION direction;
-    protected int animate = 0;
+    //protected Direction.DIRECTION direction;
+    protected DIRECTION direction;
+    public static enum DIRECTION {
+        LEFT, RIGHT, UP, DOWN, CENTER
+    }
+    protected int animate;
     protected final int MAX_ANIMATE = 3000;
     protected Sprite sprite;
-    protected boolean isMoving;
+    //protected boolean isMoving;
 
-    public AnimationEntity(int x, int y, Image image) {
+    public AnimationEntity(double x, double y, Image image) {
         super(x, y, image);
-        direction = Direction.DIRECTION.CENTER;
-        isMoving = false;
+        direction = DIRECTION.CENTER;
+        animate = 0;
+        //isMoving = false;
     }
 
-    public Direction.DIRECTION getDirection() {
+    public AnimationEntity(int x, int y, Image image, int size) {
+        super(x, y, image, size);
+        direction = DIRECTION.CENTER;
+        animate = 0;
+        //isMoving = false;
+    }
+
+//    public Direction.DIRECTION getDirection() {
+//        return direction;
+//    }
+//
+//    public void setDirection(Direction.DIRECTION direction) {
+//        this.direction = direction;
+//    }
+
+
+    public DIRECTION getDirection() {
         return direction;
     }
 
-    public void setDirection(Direction.DIRECTION direction) {
+    public void setDirection(DIRECTION direction) {
         this.direction = direction;
     }
 
-    public boolean isMoving() {
-        return isMoving;
-    }
-
-    public void setMoving(boolean moving) {
-        isMoving = moving;
-    }
+//    public boolean isMoving() {
+//        return isMoving;
+//    }
+//
+//    public void setMoving(boolean moving) {
+//        isMoving = moving;
+//    }
 
     protected void animate() {
         if (animate < MAX_ANIMATE) animate++;

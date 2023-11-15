@@ -57,8 +57,17 @@ public class DictionaryController extends MenuController implements Initializabl
             if (!newValue.isBlank()) {
                 listResults = database.dictionarySearcher(newValue);
                 suggestList.setItems(listResults);
+            } else {
+                meaningBox.setContent(null);
             }
         });
+//        searchField.textProperty().addListener((observable, oldValue, newValue)-> {
+//            if (newValue.isEmpty()) {
+//                meaningArea.clear();
+//                System.out.println("clear");
+//            }
+//        });
+//        meaningArea.e;
         searchButton.disableProperty().bind(searchField.textProperty().isEmpty());
         translateButton.disableProperty().bind(sourceArea.textProperty().isEmpty());
     }
@@ -155,16 +164,6 @@ public class DictionaryController extends MenuController implements Initializabl
     @FXML
     public void onAddButtonClick() {
         // TODO
-//        try {
-//            AnchorPane root = FXMLLoader.load(getClass().getResource("/Views/AddWordView.fxml"));
-//            //dictRoot.getChildren().add(root);
-//            Scene addScene = new Scene(root);
-//            addScene.getStylesheets().add(getClass().getResource("/Views/style.css").toExternalForm());
-//            stage.setScene(addScene);
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         addRoot.setVisible(true);
     }
 

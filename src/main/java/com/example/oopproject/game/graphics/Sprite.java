@@ -6,16 +6,14 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
 import java.awt.image.BufferedImage;
+import java.util.Arrays;
 
 /**
  * Lưu trữ thông tin các pixel của 1 sprite (hình ảnh game)
  */
 public class Sprite {
     public static final int DEFAULT_SIZE = 35;
-    /*
-    public static final int KEEPER_SIZE = 50;
-    public static final int SOCCER_SIZE = 16;
-    */
+    public static final int KEEPER_SIZE = 120;
     private static final int TRANSPARENT_COLOR = 0xffffff;
     public final int SIZE;
     private int x, y;
@@ -42,25 +40,41 @@ public class Sprite {
         }
     }
 
-    public static Sprite keeper = new Sprite(DEFAULT_SIZE, 0, 0, SpriteSheet.tiles, 12, 16);
-    public static Sprite keeper_1 = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 12, 16);
-    public static Sprite keeper_2 = new Sprite(DEFAULT_SIZE, 0, 2, SpriteSheet.tiles, 12, 16);
+    public static Sprite keeper_0 = new Sprite(KEEPER_SIZE, 0, 2, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_1 = new Sprite(KEEPER_SIZE, 1, 2, SpriteSheet.soccer, 16, 16);
+    //public static Sprite keeper_2 = new Sprite(KEEPER_SIZE, 0, 0, SpriteSheet.soccer, 16, 16);
 
-    public static Sprite keeper_hit_left = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_hit_left_1 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_hit_letf_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
+    public static Sprite keeper_hit_left = new Sprite(KEEPER_SIZE, 0, 1, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_left_1 = new Sprite(KEEPER_SIZE, 1, 1, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_letf_2 = new Sprite(KEEPER_SIZE, 2, 1, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_letf_3 = new Sprite(KEEPER_SIZE, 3, 1, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_letf_4 = new Sprite(KEEPER_SIZE, 4, 1, SpriteSheet.soccer, 16, 16);
 
-    public static Sprite keeper_hit_right = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_hit_right_1 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_hit_right_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
 
-    public static Sprite keeper_miss_left = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_miss_left_1 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_miss_letf_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
+    public static Sprite keeper_hit_right = new Sprite(KEEPER_SIZE, 0, 0, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_right_1 = new Sprite(KEEPER_SIZE, 1, 0, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_right_2 = new Sprite(KEEPER_SIZE, 2, 0, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_right_3 = new Sprite(KEEPER_SIZE, 3, 0, SpriteSheet.soccer, 16, 16);
+    public static Sprite keeper_hit_right_4 = new Sprite(KEEPER_SIZE, 4, 0, SpriteSheet.soccer, 16, 16);
 
-    public static Sprite keeper_miss_right = new Sprite(DEFAULT_SIZE, 0, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_miss_right_1 = new Sprite(DEFAULT_SIZE, 1, 1, SpriteSheet.tiles, 16, 16);
-    public static Sprite keeper_miss_right_2 = new Sprite(DEFAULT_SIZE, 2, 1, SpriteSheet.tiles, 16, 16);
+    public static Sprite[] keeper_left = {keeper_hit_left_1, keeper_hit_letf_2, keeper_hit_letf_3, keeper_hit_letf_4};
+    public static Sprite[] keeper_right = {keeper_hit_right_1, keeper_hit_right_2, keeper_hit_right_3, keeper_hit_right_4};
+
+    public static Sprite ball = new Sprite(KEEPER_SIZE, 0, 3, SpriteSheet.soccer, 16, 16);
+
+
+//    public static Sprite keeper_miss_left = new Sprite(KEEPER_SIZE, 0, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_left_1 = new Sprite(KEEPER_SIZE, 1, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_2 = new Sprite(KEEPER_SIZE, 2, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_3 = new Sprite(KEEPER_SIZE, 3, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_4 = new Sprite(KEEPER_SIZE, 4, 0, SpriteSheet.soccer, 16, 16);
+//
+//    public static Sprite keeper_hit_left = new Sprite(KEEPER_SIZE, 0, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_left_1 = new Sprite(KEEPER_SIZE, 1, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_2 = new Sprite(KEEPER_SIZE, 2, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_3 = new Sprite(KEEPER_SIZE, 3, 0, SpriteSheet.soccer, 16, 16);
+//    public static Sprite keeper_hit_letf_4 = new Sprite(KEEPER_SIZE, 4, 0, SpriteSheet.soccer, 16, 16);
+
 
     public static Sprite grass = new Sprite(DEFAULT_SIZE, 0, 0, SpriteSheet.tiles, 40, 40);
     public static Sprite rock = new Sprite(DEFAULT_SIZE, 1, 0, SpriteSheet.tiles, 40, 40);
@@ -82,6 +96,28 @@ public class Sprite {
         else return x2;
     }
 
+    public static Sprite soccerMovingSprite(Sprite[] sprites, int animate, int time) {
+        //int n = sprites.length;
+//        if (animate % time < time / 5) return sprites[0];
+//        if (animate % time < time * 2 / 5) return sprites[1];
+//        if (animate % time < time * 3 / 5) return sprites[2];
+//        if (animate % time < time * 4 / 5) return sprites[3];
+//        return sprites[4];
+        int n = sprites.length;
+        for (int i = 0; i < n; i++) {
+            if (animate % time < (i + 1) * time / 5) return sprites[i];
+        }
+        return sprites[n-1];
+
+//        return x2;
+//        for (int i = 0; i < n; i++) {
+//            if (animate & time < (i + 1) * time / n) {
+//                return sprites[i];
+//            }
+//        }
+        //int i = 1;
+    }
+
     public Image getFxImage() {
         WritableImage wr = new WritableImage(SIZE, SIZE);
         PixelWriter pw = wr.getPixelWriter();
@@ -98,18 +134,4 @@ public class Sprite {
         return input;
     }
 
-//    public Image getFxImage() {
-//        BufferedImage image = new BufferedImage(SIZE, SIZE, BufferedImage.TYPE_INT_RGB);
-//        for (int x = 0; x < SIZE; x++) {
-//            for (int y = 0; y < SIZE; y++) {
-//                if (pixels[x + y * SIZE] == TRANSPARENT_COLOR) {
-//                    image.setRGB(x, y, 0);
-//                } else {
-//                    image.setRGB(x, y, pixels[x + y * SIZE]);
-//                }
-//            }
-//        }
-//        Image image =
-//
-//    }
 }

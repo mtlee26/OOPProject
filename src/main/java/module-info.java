@@ -18,6 +18,9 @@ module com.example.oopproject {
     //exports com.example.oopproject.database;
     exports com.example.oopproject.game;
     opens com.example.oopproject.game to javafx.fxml;
+    exports com.example.oopproject.game.entities;
+    exports com.example.oopproject.game.graphics;
+    //opens com.example.oopproject.game to javafx.fxml;
     exports com.example.oopproject.game.bear;
     opens com.example.oopproject.game.bear to javafx.fxml;
     exports com.example.oopproject.game.soccer;

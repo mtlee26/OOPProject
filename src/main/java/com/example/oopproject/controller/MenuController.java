@@ -1,5 +1,7 @@
 package com.example.oopproject.controller;
 
+import com.example.oopproject.controller.game.HoneyBearController;
+import com.example.oopproject.controller.game.SoccerController;
 import com.example.oopproject.dictionary.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.example.oopproject.controller.game.HoneyBearController.game;
-
-//import static com.example.oopproject.controller.game.HoneyBearController.root;
+import static com.example.oopproject.controller.game.HoneyBearController.time;
 
 public class MenuController implements Initializable {
 
@@ -24,31 +25,26 @@ public class MenuController implements Initializable {
     @FXML
     public void onDictionaryButtonClick() {
         dictRoot.setVisible(true);
-        //gameRoot.getChildren()
         gameRoot.setVisible(false);
-        if (game != null) {
-            game.setRunning(false);
-        }
-//        soccerRoot.setVisible(false);
-//        bearRoot.setVisible(false);
+        HoneyBearController.setEnd();
+        SoccerController.setEnd();
     }
 
     @FXML
     public void onGameButtonClick() {
         dictRoot.setVisible(false);
         gameRoot.setVisible(true);
-        if (game != null) {
-            game.setRunning(false);
-            //System.out.println("here");
-        }
-        //gameRoot.getChildren().clear();
-//        soccerRoot.setVisible(false);
-//        bearRoot.setVisible(false);
+        HoneyBearController.setEnd();
+        SoccerController.setEnd();
+//        if (gameLoop != null) {
+//            game.setRunning(false);
+//            gameLoop.stop();
+//            System.out.println("stop");
+//        }
+
         try {
             AnchorPane menuGame = FXMLLoader.load(getClass().getResource("/Views/Game.fxml"));
             gameRoot.getChildren().clear();
-            //System.out.println(root);
-
             gameRoot.getChildren().add(menuGame);
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,9 +55,8 @@ public class MenuController implements Initializable {
     public void onHomeClick() {
         dictRoot.setVisible(false);
         gameRoot.setVisible(false);
-        if (game != null) {
-            game.setRunning(false);
-        }
+        HoneyBearController.setEnd();
+        SoccerController.setEnd();
     }
 
     @Override

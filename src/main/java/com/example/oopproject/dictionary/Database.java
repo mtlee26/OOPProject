@@ -1,8 +1,10 @@
 package com.example.oopproject.dictionary;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 
 import java.sql.*;
+import java.util.Collections;
 
 public class Database {
     private String url = "jdbc:mysql://localhost:3306/evdictionary";
@@ -49,6 +51,7 @@ public class Database {
                 suggestList.add(x);
             }
         }
+        FXCollections.sort(suggestList);
         return suggestList;
     }
 
@@ -61,10 +64,16 @@ public class Database {
             ps.setString(2, wordExplain);
             try {
                 ps.executeUpdate();
-
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("Save word successfully.");
+                alert.showAndWait();
             } catch (SQLIntegrityConstraintViolationException e) {
                 //word existed in dictionary
-                //alert
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("This word has already existed.");
+                alert.showAndWait();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,7 +106,7 @@ public class Database {
         }
     }
 
-//    public String databaseLookup(String wordInput) {
+//    public String lookup(String wordInput) {
 //        String wordExplain = null;
 //        String SQLQuery = "SELECT * FROM dictionary WHERE target = ?";
 //        try {

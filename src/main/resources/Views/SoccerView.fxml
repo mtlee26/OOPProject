@@ -7,31 +7,66 @@
 
 <AnchorPane fx:id="root" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.controller.game.SoccerController">
    <children>
-      <ImageView fitHeight="473.0" fitWidth="613.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/soccerbackground%20.png" />
          </image>
       </ImageView>
-      <Label fx:id="questionField" layoutX="72.0" layoutY="24.0" prefHeight="63.0" prefWidth="494.0" style="-fx-background-color: #f8f8f8;" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="questionField" layoutX="87.0" layoutY="14.0" prefHeight="63.0" prefWidth="404.0" style="-fx-background-color: #f8f8f8;" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Label fx:id="scoreField" layoutX="484.0" layoutY="113.0" prefHeight="46.0" prefWidth="96.0" />
-      <Button fx:id="option1" layoutX="57.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption1" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+      <AnchorPane fx:id="soccerRoot" layoutX="23.0" layoutY="85.0" prefHeight="341.0" prefWidth="553.0" />
+      <Button fx:id="option4" layoutX="400.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption4" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="option2" layoutX="416.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption2" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+      <Button fx:id="option3" layoutX="57.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption3" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="option3" layoutX="57.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption3" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+      <Button fx:id="option1" layoutX="57.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption1" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="option4" layoutX="416.0" layoutY="386.0" mnemonicParsing="false" onAction="#onOption4" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE">
+      <Button fx:id="option2" layoutX="400.0" layoutY="330.0" mnemonicParsing="false" onAction="#onOption2" prefHeight="40.0" prefWidth="150.0" styleClass="option-button" textFill="WHITE" wrapText="true">
          <font>
             <Font size="14.0" />
          </font></Button>
+      <Button fx:id="nextButton" layoutX="285.0" layoutY="350.0" mnemonicParsing="false" onAction="#onNext" text="Next" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="timerLabel" layoutX="20.0" layoutY="125.0" prefHeight="46.0" prefWidth="96.0" textAlignment="CENTER" textFill="#fffcfc">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="scoreField" layoutX="484.0" layoutY="125.0" prefHeight="46.0" prefWidth="96.0" textAlignment="CENTER" textFill="#fcfcfc">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <AnchorPane fx:id="endgame" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fx:id="endGame" fitHeight="450.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/soccerend.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit" layoutX="382.0" layoutY="349.0" mnemonicParsing="false" onAction="#onExit" styleClass="soccer-button" text="Exit">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="playAgain" layoutX="135.0" layoutY="349.0" mnemonicParsing="false" onAction="#onPlayAgain" styleClass="soccer-button" text="Play Again">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="scoreLabel" layoutX="244.0" layoutY="177.0" prefHeight="56.0" prefWidth="108.0" textFill="#204872">
+               <font>
+                  <Font size="66.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

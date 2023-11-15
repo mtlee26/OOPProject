@@ -1,6 +1,5 @@
 package com.example.oopproject.game.entities;
 
-import com.example.oopproject.game.Direction;
 import com.example.oopproject.game.bear.Map;
 import com.example.oopproject.game.graphics.Sprite;
 import javafx.scene.canvas.GraphicsContext;
@@ -17,12 +16,13 @@ public class Bear extends AnimationEntity {
 
 
     public Bear(int xUnit, int yUnit, Image image) {
-        super(xUnit, yUnit, image);
+        super(xUnit, yUnit, image, Sprite.DEFAULT_SIZE);
         this.xUnit = xUnit;
         this.yUnit = yUnit;
         preX = 0;
         preY = 0;
         isQuestion = false;
+        //System.out.println("new bear");
     }
 
     public int getxUnit() {
@@ -44,34 +44,34 @@ public class Bear extends AnimationEntity {
     @Override
     public Sprite chooseSprite() {
         animate();
-        sprite = Sprite.movingSprite(Sprite.bear1, Sprite.bear2, animate, 100);
+        sprite = Sprite.movingSprite(Sprite.bear1, Sprite.bear2, animate, 150);
         return sprite;
     }
 
     public void update(KeyEvent event) {
         if (event.getCode().equals(KeyCode.UP)) {
-            if (canMove(xUnit, yUnit, Direction.DIRECTION.UP)) {
+            if (canMove(xUnit, yUnit, DIRECTION.UP)) {
                 preY = yUnit;
                 preX = xUnit;
                 yUnit--;
                 y = yUnit * Sprite.DEFAULT_SIZE;
             }
         } else if (event.getCode().equals(KeyCode.DOWN)) {
-            if (canMove(xUnit, yUnit, Direction.DIRECTION.DOWN)) {
+            if (canMove(xUnit, yUnit, DIRECTION.DOWN)) {
                 preY = yUnit;
                 preX = xUnit;
                 yUnit++;
                 y = yUnit * Sprite.DEFAULT_SIZE;
             }
         } else if (event.getCode().equals(KeyCode.LEFT)) {
-            if (canMove(xUnit, yUnit, Direction.DIRECTION.LEFT)) {
+            if (canMove(xUnit, yUnit, DIRECTION.LEFT)) {
                 preX = xUnit;
                 preY = yUnit;
                 xUnit--;
                 x = xUnit * Sprite.DEFAULT_SIZE;
             }
         } else if (event.getCode().equals(KeyCode.RIGHT)) {
-            if (canMove(xUnit, yUnit, Direction.DIRECTION.RIGHT)) {
+            if (canMove(xUnit, yUnit, DIRECTION.RIGHT)) {
                 preX = xUnit;
                 preY = yUnit;
                 xUnit++;
@@ -80,8 +80,8 @@ public class Bear extends AnimationEntity {
         }
     }
 
-    public boolean canMove(int x, int y, Direction.DIRECTION direction) {
-        if (direction == Direction.DIRECTION.UP) {
+    public boolean canMove(int x, int y, DIRECTION direction) {
+        if (direction == DIRECTION.UP) {
             int yUp = y - 1;
             if (yUp < 0 || yUp >= Map.HEIGHT) {
                 return false;
@@ -94,7 +94,7 @@ public class Bear extends AnimationEntity {
                 return true;
             }
             return true;
-        } else if (direction == Direction.DIRECTION.DOWN) {
+        } else if (direction == DIRECTION.DOWN) {
             int yDown = y + 1;
             if (yDown < 0 || yDown >= Map.HEIGHT) {
                 return false;
@@ -107,7 +107,7 @@ public class Bear extends AnimationEntity {
                 return true;
             }
             return true;
-        } else if (direction == Direction.DIRECTION.LEFT) {
+        } else if (direction == DIRECTION.LEFT) {
             int xLeft = x - 1;
             if (xLeft < 0 || xLeft >= Map.WIDTH) {
                 return false;

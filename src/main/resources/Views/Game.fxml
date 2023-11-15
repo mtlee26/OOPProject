@@ -20,6 +20,49 @@
          <font>
             <Font name="Berlin Sans FB" size="44.0" />
          </font></Button>
+      <AnchorPane fx:id="soccerMenu" prefHeight="450.0" prefWidth="600.0" visible="false">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/soccerstart.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSoccerBack" prefHeight="43.0" prefWidth="41.0" styleClass="back-button">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="226.0" layoutY="315.0" mnemonicParsing="false" onAction="#onSoccerPlay" prefHeight="43.0" prefWidth="114.0" styleClass="game-menu-button" text="PLAY" textAlignment="CENTER" textFill="#204872">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="bearMenu" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/honeybearstart.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="229.0" layoutY="351.0" mnemonicParsing="false" onAction="#onBearPlay" prefHeight="43.0" prefWidth="114.0" styleClass="game-menu-button" text="PLAY" textFill="#204872">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Button>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBearBack" prefHeight="43.0" prefWidth="41.0" styleClass="back-button">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
 
    </children>
 </AnchorPane>

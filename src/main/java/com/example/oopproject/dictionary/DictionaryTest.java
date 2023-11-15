@@ -2,12 +2,14 @@ package com.example.oopproject.dictionary;
 
 import org.jsoup.Jsoup;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
-public class Dictionary {
-    private Map<String, String> wordList = new HashMap<String, String>();
+public class DictionaryTest {
+    //private Set<Word> wordList = new TreeSet<>();
+    private Map<String, String> wordList = new TreeMap<String, String>();
     public void setWordList(Map<String, String> wordList) {
         this.wordList = wordList;
     }
