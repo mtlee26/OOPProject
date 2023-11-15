@@ -7,6 +7,7 @@ import com.example.oopproject.game.entities.Bear;
 import com.example.oopproject.game.soccer.Soccer;
 import com.example.oopproject.game.soccer.SoccerManagement;
 import com.example.oopproject.game.soccer.MultipleChoiceQuestion;
+import java.io.File;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,9 +17,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
 
 import java.net.URL;
 import java.util.*;
+
 
 import static com.example.oopproject.controller.MenuController.gameRoot;
 import static com.example.oopproject.game.entities.AnimationEntity.DIRECTION.LEFT;
@@ -31,6 +35,8 @@ public class SoccerController extends GameController implements Initializable {
     public static Time time;
     private int score = 0;
     private int count = 0;
+    private Media true2Sound = new Media(new File("./src/main/resources/sound/true2.wav").toURI().toString());
+    private Media false2Sound = new Media(new File("./src/main/resources/sound/false2.wav").toURI().toString());
 
     @FXML
     private AnchorPane soccerRoot; //xoa
@@ -94,8 +100,12 @@ public class SoccerController extends GameController implements Initializable {
         if (questionList.get(count).isTrue(ans)) {
             score += 10;
             //am thanh
+            MediaPlayer truePlayer2 = new MediaPlayer(true2Sound);
+            truePlayer2.play();
             soccer.setHit(true);
         } else {
+            MediaPlayer falsePlayer2 = new MediaPlayer(false2Sound);
+            falsePlayer2.play();
 
             soccer.setHit(false);
         }
