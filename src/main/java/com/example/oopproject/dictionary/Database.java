@@ -9,7 +9,7 @@ import java.util.Collections;
 public class Database {
     private String url = "jdbc:mysql://localhost:3306/evdictionary";
     private String user = "root";
-    private String password = "letam_2624";
+    private String password = "huongham1@*#";
     private Connection connection;
     private PreparedStatement ps;
 
