@@ -59,15 +59,9 @@ public class DictionaryController extends MenuController implements Initializabl
                 suggestList.setItems(listResults);
             } else {
                 meaningBox.setContent(null);
+                alertNotFound.setVisible(false);
             }
         });
-//        searchField.textProperty().addListener((observable, oldValue, newValue)-> {
-//            if (newValue.isEmpty()) {
-//                meaningArea.clear();
-//                System.out.println("clear");
-//            }
-//        });
-//        meaningArea.e;
         searchButton.disableProperty().bind(searchField.textProperty().isEmpty());
         translateButton.disableProperty().bind(sourceArea.textProperty().isEmpty());
     }
@@ -134,7 +128,6 @@ public class DictionaryController extends MenuController implements Initializabl
         cancelChangeButton.setVisible(false);
         meaningBox.setVisible(true);
         searchField.setDisable(false);
-        //show(explain);
     }
 
     @FXML
@@ -163,13 +156,11 @@ public class DictionaryController extends MenuController implements Initializabl
 
     @FXML
     public void onAddButtonClick() {
-        // TODO
         addRoot.setVisible(true);
     }
 
     @FXML
     public void onSoundButton() {
-        System.out.println(wordInput);
         playSoundGoogleTranslateEnToVi(wordInput);
     }
 

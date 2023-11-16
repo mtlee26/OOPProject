@@ -33,10 +33,17 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="nextButton" layoutX="285.0" layoutY="350.0" mnemonicParsing="false" onAction="#onNext" text="Next" visible="false">
+      <Button fx:id="nextButton" layoutX="262.0" layoutY="355.0" mnemonicParsing="false" onAction="#onNext" prefHeight="30.0" prefWidth="75.0" styleClass="next-button">
          <font>
             <Font size="14.0" />
-         </font></Button>
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/next.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Label fx:id="timerLabel" layoutX="20.0" layoutY="125.0" prefHeight="46.0" prefWidth="96.0" textAlignment="CENTER" textFill="#fffcfc">
          <font>
             <Font size="14.0" />

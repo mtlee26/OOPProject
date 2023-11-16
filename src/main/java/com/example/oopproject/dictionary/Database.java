@@ -9,7 +9,7 @@ import java.util.Collections;
 public class Database {
     private String url = "jdbc:mysql://localhost:3306/evdictionary";
     private String user = "root";
-    private String password = "huongham1@*#";
+    private String password = "letam_2624";
     private Connection connection;
     private PreparedStatement ps;
 
@@ -56,7 +56,6 @@ public class Database {
     }
 
     public void addWord(String wordTarget, String wordExplain) {
-        dictionary.getWordList().put(wordTarget, wordExplain);
         String SQLQuery = "INSERT INTO dictionary (target, definition) VALUES (?,?)";
         try {
             ps = connection.prepareStatement(SQLQuery);
@@ -68,6 +67,7 @@ public class Database {
                 alert.setHeaderText(null);
                 alert.setContentText("Save word successfully.");
                 alert.showAndWait();
+                dictionary.getWordList().put(wordTarget, wordExplain);
             } catch (SQLIntegrityConstraintViolationException e) {
                 //word existed in dictionary
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -81,25 +81,25 @@ public class Database {
     }
 
     public void changeWord(String wordChange, String wordExplain) {
-        dictionary.getWordList().replace(wordChange, wordExplain);
         String SQLQuery = "UPDATE dictionary SET definition = ? WHERE target = ?";
         try {
             ps = connection.prepareStatement(SQLQuery);
             ps.setString(1, wordExplain);
             ps.setString(2, wordChange);
             ps.executeUpdate();
+            dictionary.getWordList().replace(wordChange, wordExplain);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void deleteWord(String word) {
-        dictionary.remove(word);
         String SQLQuery = "DELETE FROM dictionary WHERE target = ?";
         try {
             ps = connection.prepareStatement(SQLQuery);
             ps.setString(1, word);
             ps.executeUpdate();
+            dictionary.remove(word);
             System.out.println("delete successfully");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -141,49 +141,5 @@ public class Database {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-//    }
-//
-//    public void changeWord(String wordTarget, String wordExplain) {
-//        String SQLQuery = "UPDATE dictionary SET definition = ? WHERE target = ?";
-//        try {
-//            ps = connection.prepareStatement(SQLQuery);
-//            ps.setString(1, wordExplain);
-//            ps.setString(2, wordTarget);
-//            ps.executeUpdate();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void deleteWord(String word) {
-//        String SQLQuery = "DELETE FROM dictionary WHERE target = ?";
-//        try {
-//            ps = connection.prepareStatement(SQLQuery);
-//            ps.setString(1, word);
-//            ps.executeUpdate();
-//            dictionary.remove(word);
-//            System.out.println("delete successfully");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public void close() {
-//        try {
-//            if (connection != null) {
-//                connection.close();
-//            }
-//            if (ps != null) {
-//                ps.close();
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public static void main(String[] args) {
-//        Database db = new Database();
-//        db.addWord("tam", "/tam/\n-sinh vien");
-//        System.out.println(db.databaseLookup("tam"));
 //    }
 }

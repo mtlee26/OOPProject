@@ -24,7 +24,11 @@ public class Dictionary {
     }
 
     public String getMeaning(String wordTarget) {
-        return htmlToText(wordList.get(wordTarget));
+        String meaning = wordList.get(wordTarget);
+        if (meaning != null) {
+            return htmlToText(wordList.get(wordTarget));
+        }
+        return null;
     }
 
     public int size() {

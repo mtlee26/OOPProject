@@ -49,16 +49,13 @@ public class Time implements Runnable {
                         Platform.runLater(() -> {
                             timerLabel.setText("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
                         });
-                        System.out.println("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
-
-                        //timerLabel.setText("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
                     } else {
                         isEnd = true;
-                        timer.cancel();
+                        timerTask.cancel();
                     }
                 } else {
                     System.out.println("close");
-                    timerTask.cancel();
+                    timer.cancel();
                 }
             }
         };

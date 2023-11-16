@@ -19,7 +19,7 @@
     -fx-background-color: #76b9f0;
 }
 
-.submit-button:hover {
+.submit-button:hover, .next-button:hover {
     -fx-background-color: #dbeff4;
 }
 
@@ -58,7 +58,7 @@
     -fx-border-radius: 10;
 }
 
-.game-menu-button, .endgame-bear-button, .soccer-button {
+.game-menu-button, .endgame-bear-button, .soccer-button, .next-button {
     -fx-background-color: transparent;
 }
 
@@ -87,5 +87,9 @@
 
 .back-button:hover {
     -fx-background-color: #204872;
+}
+
+.next-button {
+    -fx-background-radius: 20;
 }
 
