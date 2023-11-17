@@ -15,8 +15,7 @@ public class Soccer {
     private boolean isRunning;
 
     public Soccer() {
-        System.out.println("new soccer");
-        keeper = new Keeper(220, 20, Sprite.keeper_0.getFxImage(), false);
+        keeper = new Keeper(220, 20, Sprite.keeper.getFxImage(), false);
         ball = new Ball(220, 220, Sprite.ball.getFxImage(), false);
         isRunning = true;
     }
@@ -57,6 +56,5 @@ public class Soccer {
     public void reset() {
         keeper.reset();
         ball.reset();
-        //System.out.println(keeper.isHit());
     }
 }

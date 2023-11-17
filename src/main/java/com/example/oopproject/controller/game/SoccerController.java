@@ -1,9 +1,6 @@
 package com.example.oopproject.controller.game;
 
-//import com.example.oopproject.game.Direction;
 import com.example.oopproject.game.Time;
-import com.example.oopproject.game.bear.HoneyBear;
-import com.example.oopproject.game.entities.Bear;
 import com.example.oopproject.game.soccer.Soccer;
 import com.example.oopproject.game.soccer.SoccerManagement;
 import com.example.oopproject.game.soccer.MultipleChoiceQuestion;
@@ -15,7 +12,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.Media;
@@ -23,8 +19,6 @@ import javafx.scene.media.Media;
 import java.net.URL;
 import java.util.*;
 
-
-import static com.example.oopproject.controller.MenuController.gameRoot;
 import static com.example.oopproject.game.entities.AnimationEntity.DIRECTION.LEFT;
 import static com.example.oopproject.game.entities.AnimationEntity.DIRECTION.RIGHT;
 
@@ -39,7 +33,7 @@ public class SoccerController extends GameController implements Initializable {
     private Media false2Sound = new Media(new File("./src/main/resources/sound/false2.wav").toURI().toString());
 
     @FXML
-    private AnchorPane soccerRoot; //xoa
+    private AnchorPane soccerRoot;
     @FXML
     private Label timerLabel;
     @FXML
@@ -56,12 +50,6 @@ public class SoccerController extends GameController implements Initializable {
     private Button option4;
     @FXML
     private Button nextButton;
-    @FXML
-    private ImageView endGame;
-    @FXML
-    private Button playAgain;
-    @FXML
-    private Button exit;
     @FXML
     private AnchorPane endgame;
     @FXML
@@ -83,9 +71,6 @@ public class SoccerController extends GameController implements Initializable {
             public void handle(long now) {
                 if (!time.isEnd()) {
                     scoreField.setText("Score: " + score);
-                    //game.render(gc);
-                    //gameUpdate();
-                    //questionUpdate();
                     soccer.update();
                     soccer.render(gc);
                 }
@@ -99,14 +84,12 @@ public class SoccerController extends GameController implements Initializable {
         String ans = button.getText();
         if (questionList.get(count).isTrue(ans)) {
             score += 10;
-            //am thanh
             MediaPlayer truePlayer2 = new MediaPlayer(true2Sound);
             truePlayer2.play();
             soccer.setHit(true);
         } else {
             MediaPlayer falsePlayer2 = new MediaPlayer(false2Sound);
             falsePlayer2.play();
-
             soccer.setHit(false);
         }
         if (button.equals(option1) || button.equals(option3)) {
@@ -115,8 +98,6 @@ public class SoccerController extends GameController implements Initializable {
             soccer.setDirection(RIGHT);
         }
         nextButton.setVisible(true);
-//        count++;
-//        displayQuestion();
     }
 
     public void onOption1() {
@@ -139,65 +120,25 @@ public class SoccerController extends GameController implements Initializable {
         questionField.setText(question.getQuestion());
         List<String> answer = question.getAnswer();
         Collections.shuffle(answer);
-        //System.out.println(option1.getStyle());
         option1.setText(answer.get(0));
         option2.setText(answer.get(1));
         option3.setText(answer.get(2));
         option4.setText(answer.get(3));
     }
 
-//    public void displayQuestion(ActionEvent actionEvent) {
-//        if (count < gm.NUM_OF_QUESTIONS) {
-//            setQuestion(questionList.get(count));
-//        } else {
-//            //result
-////            setScene(actionEvent, "/Views/SoccerResultView.fxml");
-//        }
-//    }
-
     public void displayQuestion() {
         if (count < gm.NUM_OF_QUESTIONS && !(time.isEnd())) {
             setQuestion(questionList.get(count));
-            //System.out.println("here");
         } else {
             //result
             System.out.println("end");
             gameLoop.stop();
             time.setEnd(true);
             soccer.setRunning(false);
-//            endGame.setVisible(true);
-//            playAgain.setVisible(true);
-//            exit.setVisible(true);
             endgame.setVisible(true);
             scoreLabel.setText(String.valueOf(score));
         }
     }
-
-//    public void gameUpdate() {
-////        if (!bear.isQuestion()) {
-////            rootGame.requestFocus();
-////            rootGame.setOnKeyPressed(keyEvent -> {
-////                game.update(keyEvent);
-////            });
-////        }
-////        if (count == 10) {
-////            //isWin = true;
-////            //soundPlayer.stop();
-////            gameLoop.stop();
-////            game.setRunning(false);
-////            win.setVisible(true);
-////            playAgain.setVisible(true);
-////            exit.setVisible(true);
-////        }
-//        if (time.isEnd()) {
-//            gameLoop.stop();
-//            //isEnd = true;
-//            //game.setRunning(false);
-//            //lose.setVisible(true);
-//            //playAgain.setVisible(true);
-//            //exit.setVisible(true);
-//        }
-//    }
 
     @FXML
     public void onNext() {
@@ -209,14 +150,8 @@ public class SoccerController extends GameController implements Initializable {
 
     @FXML
     public void onPlayAgain() {
-        //soundPlayer.play();
-        //game.setRunning(true);
-//        endGame.setVisible(false);
-//        playAgain.setVisible(false);
-//        exit.setVisible(false);
         endgame.setVisible(false);
         refresh();
-        //isEnd = false;
     }
 
     @FXML
@@ -232,7 +167,6 @@ public class SoccerController extends GameController implements Initializable {
         Collections.shuffle(questionList);
         gameLoop.start();
         time.run();
-        System.out.println("refresh");
     }
 
     public static void setEnd() {
@@ -243,5 +177,4 @@ public class SoccerController extends GameController implements Initializable {
             time.setEnd(true);
         }
     }
-
 }

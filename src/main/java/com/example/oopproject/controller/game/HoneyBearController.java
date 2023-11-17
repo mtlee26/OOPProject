@@ -28,8 +28,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 public class HoneyBearController extends GameController implements Initializable {
-//    @FXML
-//    private AnchorPane root;
     @FXML
     private AnchorPane rootGame;
     @FXML
@@ -41,7 +39,6 @@ public class HoneyBearController extends GameController implements Initializable
     private BearManagement quiz = new BearManagement();
     private List<Question> questionList = quiz.getQuestionList();
     private int count;
-    private boolean isEnd;
     private int cntWrong;
     private AnimationTimer gameLoop;
     @FXML
@@ -52,23 +49,14 @@ public class HoneyBearController extends GameController implements Initializable
     private Button exit;
     @FXML
     private Button playAgain;
-    private int totalTime;
     @FXML
     private Label timerLabel;
-//    private Media sound = new Media(new File("./src/main/resources/sound/music.wav").toURI().toString());
     private Media trueSound = new Media(new File("./src/main/resources/sound/true.wav").toURI().toString());
     private Media falseSound = new Media(new File("./src/main/resources/sound/false.wav").toURI().toString());
-    //public MediaPlayer soundPlayer = new MediaPlayer(sound);
     public static Time time;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        totalTime = 300;
-//        int minutes = totalTime / 60;
-//        int seconds = totalTime % 60;
-        //DecimalFormat df = new DecimalFormat("00");
-        //timerLabel.setText("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
-        //isEnd = false;
         count = 0;
         cntWrong = 0;
         game = new HoneyBear();
@@ -80,33 +68,10 @@ public class HoneyBearController extends GameController implements Initializable
         rootGame.getChildren().add(canvas);
         System.out.println("new bear fxml");
         System.out.println(game.isRunning());
-//        sound = new Media(new File("./src/main/resources/music.wav").toURI().toString());
-//        soundPlayer = new MediaPlayer(sound);
-//        soundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
 
         gameLoop = new AnimationTimer() {
-            //private long lastUpdate = 0;
             @Override
             public void handle(long now) {
-                //if (!isEnd) {
-//                    if (lastUpdate == 0) {
-//                        lastUpdate = now;
-//                    }
-//                    long elapsedNanos = now - lastUpdate;
-//                    double elapsedSeconds = elapsedNanos / 1000000000.0;
-//                    if (elapsedSeconds >= 1.0) {
-//                        totalTime--;
-//                        int minutes = totalTime / 60;
-//                        int seconds = totalTime % 60;
-//                        //DecimalFormat df = new DecimalFormat("00");
-//                        timerLabel.setText("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
-//                        lastUpdate = now;
-//                        if (totalTime <= 0) {
-//                            isEnd = true;
-//                        }
-//                    }
-//                    soundPlayer.play();
-                //}
                 gameUpdate();
                 questionUpdate();
                 game.render(gc);
@@ -125,8 +90,6 @@ public class HoneyBearController extends GameController implements Initializable
             });
         }
         if (bear.getxUnit() == 7 && bear.getyUnit() == 7) {
-            //isWin = true;
-            //soundPlayer.stop();
             gameLoop.stop();
             game.setRunning(false);
             win.setVisible(true);
@@ -135,7 +98,6 @@ public class HoneyBearController extends GameController implements Initializable
         }
         if (cntWrong == 2 || time.isEnd()) {
             gameLoop.stop();
-            //isEnd = true;
             time.setEnd(true);
             game.setRunning(false);
             lose.setVisible(true);
@@ -179,7 +141,6 @@ public class HoneyBearController extends GameController implements Initializable
             if (questionList.get(count).isTrue(answer)) {
                 MediaPlayer truePlayer = new MediaPlayer(trueSound);
                 truePlayer.play();
-                cntWrong = 0;
                 game.getMap().updateMap(x, y, new FootPrint(x, y, Sprite.foot_print.getFxImage()));
                 question.setText(questionList.get(count).getQuestion().replace('_', answer.charAt(0)));
             } else {
@@ -199,6 +160,11 @@ public class HoneyBearController extends GameController implements Initializable
         }
     }
 
+    @FXML
+    private void onEnter() {
+        onSubmit();
+    }
+
     public void refresh() {
         count = 0;
         cntWrong = 0;
@@ -207,13 +173,8 @@ public class HoneyBearController extends GameController implements Initializable
         game = new HoneyBear();
         time = new Time(timerLabel);
         Collections.shuffle(questionList);
-//        totalTime = 300;
-//        int minutes = totalTime / 60;
-//        int seconds = totalTime % 60;
-//        //timerLabel.setText("Time left: " + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
         gameLoop.start();
         time.run();
-        System.out.println("refresh");
     }
 
     public static void setEnd() {

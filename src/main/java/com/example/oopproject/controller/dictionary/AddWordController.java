@@ -42,6 +42,8 @@ public class AddWordController implements Initializable {
 
     @FXML
     public void onCancelAddWordButtonClick() {
+        newWordTargetField.clear();
+        newWordExplainField.clear();
         addRoot.setVisible(false);
     }
 }

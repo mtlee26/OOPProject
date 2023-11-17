@@ -12,13 +12,14 @@ public class Keeper extends AnimationEntity {
     private boolean isHit;
     private boolean isMoving;
     private double initX, initY;
+    public static final double MOVE_SPACE = 2.5;
 
     public Keeper(double x, double y, Image image, boolean isHit) {
         super(x, y, image);
         initX = x;
         initY = y;
         this.isHit = isHit;
-        sprite = Sprite.keeper_0;
+        sprite = Sprite.keeper;
         isMoving = true;
     }
 
@@ -31,27 +32,14 @@ public class Keeper extends AnimationEntity {
     }
 
     public Sprite chooseSprite() {
-//        animate();
         switch (direction) {
             case CENTER:
-                //animate();
-                sprite = Sprite.keeper_hit_left;
-                //sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, animate, 150);
-                //sprite = Sprite.movingSprite(Sprite.keeper_left, Sprite.keeper_1, animate, 100);
-                //sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-                //System.out.println(sprite);
+                sprite = Sprite.keeper;
                 break;
             case LEFT:
-                //animate = 0;
                 animate();
                 if (isMoving) {
                     sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-//                    if (isHit) {
-//                        //sprite = Sprite.keeper_hit_left;
-//                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-//                    } else {
-//                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-//                    }
                     if (sprite.equals(Sprite.keeper_left[Sprite.keeper_left.length - 1])) {
                         isMoving = false;
                         animate = 0;
@@ -62,12 +50,6 @@ public class Keeper extends AnimationEntity {
                 animate();
                 if (isMoving) {
                     sprite = Sprite.soccerMovingSprite(Sprite.keeper_right, animate, 100);
-//                    if (isHit) {
-//                        //sprite = Sprite.keeper_hit_left;
-//                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-//                    } else {
-//                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-//                    }
                     if (sprite.equals(Sprite.keeper_right[Sprite.keeper_right.length - 1])) {
                         isMoving = false;
                         animate = 0;
@@ -88,23 +70,11 @@ public class Keeper extends AnimationEntity {
 
     @Override
     public void update() {
-        if (isHit) {
-            if (isMoving) {
-                if (direction == LEFT) {
-                    x -= 2.5;
-                } else if (direction == RIGHT) {
-                    x += 2.5;
-                }
-//                System.out.println(x + " " + y);
-            }
-        } else {
-            if (isMoving) {
-                if (direction == LEFT) {
-                    x -= 2.5;
-                } else if (direction == RIGHT) {
-                    x += 2.5;
-                }
-
+        if (isMoving) {
+            if (direction == LEFT) {
+                x -= MOVE_SPACE;
+            } else if (direction == RIGHT) {
+                x += MOVE_SPACE;
             }
         }
         if (x >= 500 || x <= 50) {
@@ -119,6 +89,5 @@ public class Keeper extends AnimationEntity {
         animate = 0;
         x = initX;
         y = initY;
-        System.out.println(animate);
     }
 }

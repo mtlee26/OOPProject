@@ -1,11 +1,9 @@
 package com.example.oopproject.game.entities;
 
-//import com.example.oopproject.game.Direction;
 import com.example.oopproject.game.graphics.Sprite;
 import javafx.scene.image.Image;
 
 public class AnimationEntity extends Entity {
-    //protected Direction.DIRECTION direction;
     protected DIRECTION direction;
     public static enum DIRECTION {
         LEFT, RIGHT, UP, DOWN, CENTER
@@ -19,7 +17,6 @@ public class AnimationEntity extends Entity {
         super(x, y, image);
         direction = DIRECTION.CENTER;
         animate = 0;
-        //isMoving = false;
     }
 
     public AnimationEntity(int x, int y, Image image, int size) {
@@ -28,15 +25,6 @@ public class AnimationEntity extends Entity {
         animate = 0;
         //isMoving = false;
     }
-
-//    public Direction.DIRECTION getDirection() {
-//        return direction;
-//    }
-//
-//    public void setDirection(Direction.DIRECTION direction) {
-//        this.direction = direction;
-//    }
-
 
     public DIRECTION getDirection() {
         return direction;

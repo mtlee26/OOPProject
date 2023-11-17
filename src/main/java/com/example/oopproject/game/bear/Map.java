@@ -22,7 +22,6 @@ public class Map {
     private Honey honey;
 
     public Map() {
-        System.out.println("new map");
         map = new ArrayList<>();
         bear = new Bear(0, 0, Sprite.bear1.getFxImage());
         honey = new Honey(7, 7, Sprite.honey.getFxImage());

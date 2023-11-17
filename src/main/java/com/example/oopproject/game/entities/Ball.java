@@ -39,50 +39,8 @@ public class Ball extends AnimationEntity {
     }
 
     public Sprite chooseSprite() {
-//        animate();
-//        switch (direction) {
-//            case CENTER:
-//                sprite = Sprite.movingSprite(Sprite.keeper_0, Sprite.keeper_0, animate, 150);
-//                break;
-//            case LEFT:
-//                animate();
-//                if (isMoving) {
-//                    sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 150);
-////                    if (isHit) {
-////                        //sprite = Sprite.keeper_hit_left;
-////                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-////                    } else {
-////                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-////                    }
-//                    if (sprite.equals(Sprite.keeper_left[4])) {
-//                        isMoving = false;
-//                        animate = 0;
-//                    }
-//                }
-//                break;
-//            case RIGHT:
-//                animate();
-//                if (isMoving) {
-//                    sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 150);
-////                    if (isHit) {
-////                        //sprite = Sprite.keeper_hit_left;
-////                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-////                    } else {
-////                        sprite = Sprite.soccerMovingSprite(Sprite.keeper_left, animate, 100);
-////                    }
-//                    if (sprite.equals(Sprite.keeper_left[4])) {
-//                        isMoving = false;
-//                        animate = 0;
-//                    }
-//                }
-//                break;
-//            default:
-//                break;
-            sprite = Sprite.ball;
-            //sprite = Sprite.movingSprite(Sprite.keeper, Sprite.keeper_1, animate, 150);            }
-        //}
+        sprite = Sprite.ball;
         return sprite;
-        //return null;
     }
 
     @Override
@@ -105,7 +63,6 @@ public class Ball extends AnimationEntity {
                 if (y <= 30) {
                     isMoving = false;
                 }
-                    //System.out.println(x + " " + y);
             } else {
                 if (direction == LEFT) {
                     x -= 3;
@@ -128,6 +85,5 @@ public class Ball extends AnimationEntity {
         animate = 0;
         x = initX;
         y = initY;
-        //System.out.println(animate);
     }
 }

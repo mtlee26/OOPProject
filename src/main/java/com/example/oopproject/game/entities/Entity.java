@@ -3,8 +3,6 @@ package com.example.oopproject.game.entities;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
-import com.example.oopproject.game.graphics.Sprite;
-
 public class Entity {
     protected double x;
     protected double y;

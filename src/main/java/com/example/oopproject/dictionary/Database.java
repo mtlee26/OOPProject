@@ -122,24 +122,4 @@ public class Database {
 //        }
 //        return wordExplain;
 //    }
-//
-//    public void addWord(String wordTarget, String wordExplain) {
-//        String SQLQuery = "INSERT INTO dictionary (target, definition) VALUES (?,?)";
-//        try {
-//            ps = connection.prepareStatement(SQLQuery);
-//            ps.setString(1, wordTarget);
-//            ps.setString(2, wordExplain);
-//            try {
-//                ps.executeUpdate();
-//
-//            } catch (SQLIntegrityConstraintViolationException e) {
-//                //word existed in dictionary
-//                //alert
-//
-//            }
-//            dictionary.add(wordTarget);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

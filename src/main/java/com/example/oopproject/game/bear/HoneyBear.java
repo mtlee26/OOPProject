@@ -19,7 +19,6 @@ public class HoneyBear {
         sound = new Media(new File("./src/main/resources/sound/music2.wav").toURI().toString());
         soundPlayer = new MediaPlayer(sound);
         soundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-        System.out.println("new");
     }
 
     public void update(KeyEvent event) {
@@ -33,7 +32,6 @@ public class HoneyBear {
         } else {
             soundPlayer.stop();
         }
-        //System.out.println("render");
     }
 
     public boolean isRunning() {

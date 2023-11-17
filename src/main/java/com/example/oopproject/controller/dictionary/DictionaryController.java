@@ -35,6 +35,8 @@ public class DictionaryController extends MenuController implements Initializabl
     @FXML
     private Button searchButton;
     @FXML
+    private Button changeButton;
+    @FXML
     private Button saveChangeButton;
     @FXML
     private Button cancelChangeButton;
@@ -64,6 +66,7 @@ public class DictionaryController extends MenuController implements Initializabl
         });
         searchButton.disableProperty().bind(searchField.textProperty().isEmpty());
         translateButton.disableProperty().bind(sourceArea.textProperty().isEmpty());
+        changeButton.disableProperty().bind(meaningBox.contentProperty().isNull());
     }
 
     @FXML

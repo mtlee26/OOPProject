@@ -19,9 +19,8 @@ public class Time implements Runnable {
 
     public Time(Label timerLabel) {
         timer = new Timer();
-        System.out.println("new timer");
         this.timerLabel = timerLabel;
-        totalTime = 120;
+        totalTime = 30;
         isEnd = false;
     }
 

@@ -31,9 +31,6 @@ public class Dictionary {
         return null;
     }
 
-    public int size() {
-        return wordList.size();
-    }
     public static String htmlToText(String html) {
         String source = Jsoup.parse(html).wholeText();
         return source;

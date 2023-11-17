@@ -11,7 +11,6 @@ import java.io.IOException;
 public class DictionaryApplication extends Application {
     public static Stage stage;
     public static Scene scene;
-    //public static Pane root;
     public static void main(String[] args) {
         launch(args);
     }

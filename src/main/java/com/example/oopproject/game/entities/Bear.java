@@ -22,7 +22,6 @@ public class Bear extends AnimationEntity {
         preX = 0;
         preY = 0;
         isQuestion = false;
-        //System.out.println("new bear");
     }
 
     public int getxUnit() {
