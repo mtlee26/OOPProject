@@ -20,7 +20,7 @@ public class Time implements Runnable {
     public Time(Label timerLabel) {
         timer = new Timer();
         this.timerLabel = timerLabel;
-        totalTime = 30;
+        totalTime = 120;
         isEnd = false;
     }
 

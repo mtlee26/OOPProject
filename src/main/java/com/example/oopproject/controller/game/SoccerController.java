@@ -73,6 +73,12 @@ public class SoccerController extends GameController implements Initializable {
                     scoreField.setText("Score: " + score);
                     soccer.update();
                     soccer.render(gc);
+                } else {
+                    gameLoop.stop();
+                    time.setEnd(true);
+                    soccer.setRunning(false);
+                    endgame.setVisible(true);
+                    scoreLabel.setText(String.valueOf(score));
                 }
             }
         };
